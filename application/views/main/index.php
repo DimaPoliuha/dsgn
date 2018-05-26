@@ -9,8 +9,8 @@
 
 <p>main page</p>
 
-<?php foreach ($news as $new): ?>
-    <h3><?php echo $new['title'] ?></h3>
-    <p><?php echo $new['description'] ?></p>
-    <hr>
-<?php endforeach;?>
+<?php //foreach ($news as $new): ?>
+<!--    <h3>--><?php //echo $new['title'] ?><!--</h3>-->
+<!--    <p>--><?php //echo $new['description'] ?><!--</p>-->
+<!--    <hr>-->
+<?php //endforeach;?>
