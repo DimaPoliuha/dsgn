@@ -7,15 +7,25 @@
  */
 
 return [
+
+//    MainController
+
     '' => [
         'controller' => 'main',
         'action' => 'index'
     ],
 
-    'contacts' => [
+    'about' => [
         'controller' => 'main',
-        'action' => 'contacts'
+        'action' => 'about'
     ],
+
+    'contact' => [
+        'controller' => 'main',
+        'action' => 'contact'
+    ],
+
+//    AccountController
 
     'login' => [
         'controller' => 'account',
@@ -27,14 +37,41 @@ return [
         'action' => 'register'
     ],
 
-//    'account/login' => [
-//        'controller' => 'account',
-//        'action' => 'login'
-//        ],
-//
-//    'account/register' => [
-//        'controller' => 'account',
-//        'action' => 'register'
-//    ],
+    'account/logout' => [
+        'controller' => 'account',
+        'action' => 'logout'
+    ],
+
+    'profile' => [
+        'controller' => 'account',
+        'action' => 'profile'
+    ],
+
+//    AdminController
+
+    'admin/login' => [
+        'controller' => 'admin',
+        'action' => 'login'
+    ],
+
+    'admin/logout' => [
+        'controller' => 'admin',
+        'action' => 'logout'
+    ],
+
+    'admin/add' => [
+        'controller' => 'admin',
+        'action' => 'add'
+    ],
+
+    'admin/edit' => [
+        'controller' => 'admin',
+        'action' => 'edit'
+    ],
+
+    'admin/delete' => [
+        'controller' => 'admin',
+        'action' => 'delete'
+    ],
 
 ];
