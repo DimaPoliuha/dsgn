@@ -13,28 +13,39 @@ use application\core\Controller;
 class MainController extends Controller {
 
     public function indexAction(){
-//        $result = $this->model->getNews();
 //        $vars = [
-//            'news' => $result,
+//            'projects' => $result,
 //        ];
-//        $this->view->render('Main page', $vars);
-        $this->view->render('Main');
+//        $this->view->render('Home', $vars);
+        $this->view->render('Home');
+        if(!$this->model->getProjects()){
+            $this->model->getProjects();
+        }
+        $this->model->getStudio();
+        $this->model->getNews();
+        $this->model->getContact();
     }
 
     public function projectsAction(){
         $this->view->render('Projects');
+        if(!$this->model->getProjects()){
+            $this->model->getProjects();
+        }
     }
 
     public function studioAction(){
         $this->view->render('Studio');
+        $this->model->getStudio();
     }
 
     public function newsAction(){
         $this->view->render('News');
+        $this->model->getNews();
     }
 
     public function contactAction(){
         $this->view->render('Contact us');
+        $this->model->getContact();
     }
 
 }
