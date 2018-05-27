@@ -9,6 +9,7 @@
 return [
     'host' => 'localhost',
     'dbname' => 'test',
+    'charset' => 'utf8',
     'user' => 'root',
     'password' => '',
 ];
