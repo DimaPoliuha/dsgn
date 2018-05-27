@@ -21,8 +21,12 @@ class MainController extends Controller {
         $this->view->render('Main');
     }
 
-    public function contactsAction(){
-        $this->view->render('Contacts');
+    public function aboutAction(){
+        $this->view->render('About us');
+    }
+
+    public function contactAction(){
+        $this->view->render('Contact us');
     }
 
 }

@@ -32,4 +32,18 @@ class AccountController extends Controller {
         //$this->view->path = 'test/test';
         //var_dump($this->route);
     }
+
+    public function logoutAction(){
+        //$this->view->layout = 'custom';
+        $this->view->render('Logout');
+        //$this->view->path = 'test/test';
+        //var_dump($this->route);
+    }
+
+    public function profileAction(){
+        //$this->view->layout = 'custom';
+        $this->view->render('Profile');
+        //$this->view->path = 'test/test';
+        //var_dump($this->route);
+    }
 }
