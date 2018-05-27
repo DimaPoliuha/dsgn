@@ -21,8 +21,16 @@ class MainController extends Controller {
         $this->view->render('Main');
     }
 
-    public function aboutAction(){
-        $this->view->render('About us');
+    public function projectsAction(){
+        $this->view->render('Projects');
+    }
+
+    public function studioAction(){
+        $this->view->render('Studio');
+    }
+
+    public function newsAction(){
+        $this->view->render('News');
     }
 
     public function contactAction(){
