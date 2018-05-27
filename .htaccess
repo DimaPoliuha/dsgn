@@ -9,3 +9,9 @@ RewriteRule ^(.*)$ index.php
  Order Allow,Deny
  Deny from all
  </FilesMatch>
+
+# запрет кэширования
+
+ <FilesMatch ".(css|js|html)$">
+   Header unset Cache-Control
+ </FilesMatch>

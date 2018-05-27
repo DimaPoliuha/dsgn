@@ -1,0 +1,100 @@
+/*Import*/
+@import "clearfix.less";
+
+/*Colours*/
+
+@background: #eaece3;
+
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700,700i');
+
+h1, h2, h3{
+	word-wrap: break-word;
+}
+h1{
+	font-size: px;
+}
+h2{
+	font-size: 19px;
+}
+h3{
+	font-size: px;
+}
+
+#light-font{
+	font-weight: 300;
+}
+
+#bold-font{
+	font-weight: 700;
+}
+
+#bold-font-italic{
+	font-style: italic;
+	font-weight: 700;
+}
+
+*{
+	box-sizing: border-box;
+	overflow-x: hidden;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: none;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	background: @background;
+}
+
+
+input{
+	border: none;
+	cursor: pointer;
+}
+
+/* ---- grid ---- */
+
+.grid {
+	background: #EEE;
+	max-width: 1170px;
+	margin: 0 auto;
+	.clearfix;
+}
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+	width: 16.6666%;
+}
+
+.grid-item {
+	height: 200px;
+	float: left;
+	border: 1px solid black;
+}
+
+.grid-item--width2 { width: 33.3332%; }
+.grid-item--width3 { width: 49.9998%; }
+.grid-item--width4 { width: 66.6664%; }
+.grid-item--width5 { width: 83.333%; }
+.grid-item--width6 { width: 99.9996%; }
+
+.grid-item--height2 { height: 350px; }
+.grid-item--height3 { height: 400px; }
+.grid-item--height4 { height: 600px; }
+
+//Header
+
+#head-main{
+	padding-left: 9%;
+	padding-top: 4%;
+
+	#logo{
+		width: 150px;
+	}
+}
+
+/*Adaptive*/
+@import "adaptive/laptop.less";
+@import "adaptive/tablet.less";
+@import "adaptive/mobile.less";
