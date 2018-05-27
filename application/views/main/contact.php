@@ -7,4 +7,4 @@
  */
 ?>
 
-<p>contacts</p>
+<p>contact</p>
