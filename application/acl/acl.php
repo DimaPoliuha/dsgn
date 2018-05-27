@@ -9,7 +9,9 @@
 return [
     'all' => [
         'index',
-        'about',
+        'projects',
+        'studio',
+        'news',
         'contact',
         'login',
         'register',
@@ -18,7 +20,9 @@ return [
     ],
     'authorize' => [
         'index',
-        'about',
+        'projects',
+        'studio',
+        'news',
         'contact',
         'login',
         'register',
@@ -27,7 +31,9 @@ return [
     ],
     'admin' => [
         'index',
-        'about',
+        'projects',
+        'studio',
+        'news',
         'contact',
         'login',
         'register',
