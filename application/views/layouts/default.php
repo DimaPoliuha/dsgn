@@ -22,6 +22,22 @@
 </head>
 <body>
 
+<!--header-->
+<div class="grid">
+    <div class="grid-sizer"></div>
+    <div id="head-main" class="grid-item grid-item--width4 grid-item--height3">
+        <img id="logo" src="/<?php echo \application\core\ROOT_URL?>public/images/logo.png">
+        <h2>ASSOCIATES<br>STUDIO<br>DESIGN</h2>
+        <div class="social">
+            <a href="https://www.facebook.com/"><img src="/<?php echo \application\core\ROOT_URL?>public/images/facebookIcon.png"></a>
+            <a href="https://twitter.com/"><img src="/<?php echo \application\core\ROOT_URL?>public/images/twitterIcon.png"></a>
+            <a href="https://www.linkedin.com/"><img src="/<?php echo \application\core\ROOT_URL?>public/images/linkedinIcon.png"></a>
+            <a href="https://plus.google.com"><img src="/<?php echo \application\core\ROOT_URL?>public/images/gIcon.png"></a>
+        </div>
+    </div>
+    <div class="grid-item grid-item--width2 grid-item--height3">2</div>
+</div>
+
 <?php
     echo $content;
 ?>
