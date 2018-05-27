@@ -32,9 +32,11 @@ abstract class Controller{
     }
 
     public function checkAcl(){
-        $path = 'application/acl/acl.php';
+        $path = 'application/acl/' . $this->route['controller'] . '.php';
         if(file_exists($path)){
             $this->acl = require_once $path;
+        } else{
+            $this->acl = require_once 'application/acl/acl.php';
         }
         if($this->isAcl('all')){
             return true;

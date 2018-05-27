@@ -9,13 +9,29 @@
 return [
     'all' => [
         'index',
+        'about',
+        'contact',
         'login',
-        'register'
+        'register',
+        'logout',
+        'profile',
     ],
     'authorize' => [
         'index',
+        'about',
+        'contact',
+        'login',
+        'register',
+        'logout',
+        'profile',
     ],
     'admin' => [
         'index',
+        'about',
+        'contact',
+        'login',
+        'register',
+        'logout',
+        'profile',
     ],
 ];
