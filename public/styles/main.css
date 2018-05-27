@@ -1,0 +1,142 @@
+/*Import*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*Colours*/
+/*Fonts*/
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(https://fonts.gstatic.com/s/robotocondensed/v16/ieVg2ZhZI2eCN5jzbjEETS9weq8-19eDtCYobdNc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(https://fonts.gstatic.com/s/robotocondensed/v16/ieVi2ZhZI2eCN5jzbjEETS9weq8-33mZGCQYag.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v16/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7CA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(https://fonts.gstatic.com/s/robotocondensed/v16/ieVi2ZhZI2eCN5jzbjEETS9weq8-32meGCQYag.ttf) format('truetype');
+}
+h1,
+h2,
+h3 {
+  word-wrap: break-word;
+}
+h1 {
+  font-size: 25px;
+}
+h2 {
+  font-size: 19px;
+}
+h3 {
+  font-size: 16px;
+}
+#light-font {
+  font-weight: 300;
+}
+#bold-font {
+  font-weight: 700;
+}
+#bold-font-italic {
+  font-style: italic;
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background: #eaece3;
+}
+input {
+  border: none;
+  cursor: pointer;
+}
+/* ---- grid ---- */
+.grid {
+  background: #EEE;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* ---- grid-item ---- */
+.grid-sizer,
+.grid-item {
+  width: 16.6666%;
+}
+.grid-item {
+  height: 200px;
+  float: left;
+  border: 1px solid black;
+}
+.grid-item--width2 {
+  width: 33.3332%;
+}
+.grid-item--width3 {
+  width: 49.9998%;
+}
+.grid-item--width4 {
+  width: 66.6664%;
+}
+.grid-item--width5 {
+  width: 83.333%;
+}
+.grid-item--width6 {
+  width: 99.9996%;
+}
+.grid-item--height2 {
+  height: 350px;
+}
+.grid-item--height3 {
+  height: 400px;
+}
+.grid-item--height4 {
+  height: 600px;
+}
+#head-main {
+  padding-left: 9%;
+  padding-top: 4%;
+}
+#head-main #logo {
+  width: 150px;
+}
+/*Adaptive*/
+/*Laptop*/
+/*
+@media(max-width:1200px) and (min-width:992px){
+
+}
+*/
+/*Tablet*/
+/*
+@media(max-width:992px) and (min-width:767px){
+
+}
+*/
+/*Mobile*/
+/*
+@media(max-width:767px){
+
+}
+*/
+/*# sourceMappingURL=main.css.map */
