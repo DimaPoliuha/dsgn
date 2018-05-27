@@ -39,7 +39,7 @@ h1 {
   font-size: 25px;
 }
 h2 {
-  font-size: 19px;
+  font-size: 16px;
 }
 h3 {
   font-size: 16px;
@@ -62,7 +62,9 @@ h3 {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  background: #eaece3;
+}
+body {
+  background: #fefefe;
 }
 input {
   border: none;
@@ -116,9 +118,18 @@ input {
 #head-main {
   padding-left: 9%;
   padding-top: 4%;
+  background: #eaece3;
 }
 #head-main #logo {
   width: 150px;
+}
+.social {
+  margin-top: 5%;
+  width: 22%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  transform: scale(0.8);
 }
 /*Adaptive*/
 /*Laptop*/
