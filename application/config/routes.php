@@ -15,9 +15,19 @@ return [
         'action' => 'index'
     ],
 
-    'about' => [
+    'projects' => [
         'controller' => 'main',
-        'action' => 'about'
+        'action' => 'projects'
+    ],
+
+    'studio' => [
+        'controller' => 'main',
+        'action' => 'studio'
+    ],
+
+    'news' => [
+        'controller' => 'main',
+        'action' => 'news'
     ],
 
     'contact' => [
