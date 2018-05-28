@@ -9,7 +9,9 @@
 
 <script type="text/javascript" src="/<?php echo \application\core\ROOT_URL?>public/scripts/script.js"></script>
 
-<div class="grid">
+<!-- contact -->
+
+<div class="container masonry">
     <div class="grid-sizer"></div>
     <div class="grid-item grid-item--width3 grid-item--height4">18</div>
     <div class="grid-item grid-item--width3 grid-item--height4">19</div>

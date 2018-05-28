@@ -8,6 +8,15 @@ $(document).ready(function () {
     //     // horizontalOrder: true
     // });
 
+    $('.masonry').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        transitionDuration: '0.2s',
+        gutter: 20,
+        // fitWidth: true,
+    });
+      
+
     var slideout = new Slideout({
         'panel': document.getElementById('main'),
         'menu': document.getElementById('menu-mob'),

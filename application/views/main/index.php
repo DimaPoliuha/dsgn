@@ -8,3 +8,4 @@
 ?>
 
 <script type="text/javascript" src="/<?php echo \application\core\ROOT_URL?>public/scripts/script.js"></script>
+

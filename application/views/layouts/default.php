@@ -36,7 +36,7 @@
     <!--header-->
     <div class="container">
         <div class="row">
-            <div class="grid-item grid-item--width4p grid-item-mob--width grid-item--height3 grid-item-laptop--height3 grid-item-tablet--height3 grid-item-mob--height-head">
+            <div class="grid-item-responsive grid-item--width4p grid-item-mob--width grid-item--height3 grid-item-laptop--height3 grid-item-tablet--height3 grid-item-mob--height-head">
                 <div id="head-main" class="grid-item--height3 grid-item-laptop--height3 grid-item-tablet--height3 grid-item-mob--height-head">
                     <img id="logo" src="/<?php echo \application\core\ROOT_URL?>public/images/logo.png">
                     <h2>ASSOCIATES<br>STUDIO<br>DESIGN</h2>
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="grid-item grid-item--width2p grid-item-mob--width grid-item--height3 grid-item-laptop--height3 grid-item-tablet--height3 grid-item-mob--height3">
+            <div class="grid-item-responsive grid-item--width2p grid-item-mob--width grid-item--height3 grid-item-laptop--height3 grid-item-tablet--height3 grid-item-mob--height3">
                 <div id="header-menu" class="grid-item--height3 grid-item-laptop--height3 grid-item-tablet--height3 grid-item-mob--height3">
                     <!-- <div class="btn-menu"><input type="submit" class="menusub js-slideout-toggle" name="" value=""/></div> -->
                     <ul>
@@ -75,10 +75,9 @@
             </div>
         </div>
     </div>
-</div>
-
-<?php
+    <?php
     echo $content;
-?>
+    ?>
+</div>
 </body>
 </html>
