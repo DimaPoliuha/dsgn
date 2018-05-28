@@ -12,6 +12,6 @@ RewriteRule ^(.*)$ index.php
 
 # запрет кэширования
 
- <FilesMatch ".(css|js|html)$">
+ <FilesMatch ".(css|js|html|png)$">
    Header unset Cache-Control
  </FilesMatch>
