@@ -7,13 +7,11 @@
  */
 ?>
 
-<script type="text/javascript" src="/<?php echo \application\core\ROOT_URL?>public/scripts/script.js"></script>
-
 <!-- projects -->
 
 <div class="container masonry">
-    <div class="grid-sizer"></div>
-    <div id="projects-main" class="grid-item grid-item--width2 grid-item--height3">
+    <div class="grid-sizer col-lg-1 col-sm-6"></div>
+    <div id="projects-main" class="grid-item col-lg-4 offset grid-item--height3 shadow">
         <nav id="projects-type">
             <a class="color-white" href="#info">All</a>
             <a class="color-white" href="#info">House</a>
@@ -23,15 +21,133 @@
         </nav>
         <h1 class="color-white">Projects</h1>
     </div>
-    <div class="grid-item grid-item--width2 grid-item--height3 grid-item-mobile--width">4</div>
-    <div class="grid-item grid-item--width2 grid-item-mobile--width">5</div>
-    <div class="grid-item grid-item--width2 grid-item--height3 grid-item-mobile--width">6</div>
-    <div class="grid-item grid-item--height3 grid-item-tablet--width2 grid-item-mobile--width">7</div>
-    <div class="grid-item grid-item--width3 grid-item--height3 grid-item-mobile--width">8</div>
-    <div class="grid-item grid-item--width2 grid-item-mobile--width">9</div>
-    <div class="grid-item grid-item--width3 grid-item--height2 grid-item-mobile--width">10</div>
-    <div class="grid-item grid-item--height2 grid-item-tablet--width2 grid-item-mobile--width">11</div>
-    <div id="projects-timeline" class="grid-item grid-item--width2 grid-item--height2 grid-item-mobile--width">
+    <div class="w-4-h-3 col-lg-4 col-sm-6  offset grid-item--height3 grid-item shadow">
+        <h2>Fondue</h2>
+        <h4>
+            <b>Designer</b>: Some some
+            <br>
+            <b>Material</b>: Some some
+            <br>
+            <b>Typology</b>: Some some
+            <br>
+            <b>Client</b>: Some some
+            <br>
+            <b>Year</b>: Some some
+        </h4>
+        <a class="view-project" href="">View project</a>
+        <div class="basket"></div>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/fondue.png"/>
+    </div>
+
+    <div class="w-4-h-1 col-lg-4 col-sm-6  offset grid-item--height1 grid-item shadow bg-white">
+        <h2>Potter</h2>
+        <h4>
+            <b>Designer</b>: Some some
+            <br>
+            <b>Typology</b>: Some some
+        </h4>
+        <a class="view-project" href="">View project</a>
+        <div class="basket"></div>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/potter.png"/>
+    </div>
+
+    <div class="w-4-h-3 col-lg-4 col-sm-6  offset grid-item--height3 grid-item shadow bg-white">
+        <h2>Tabano</h2>
+        <h4>
+            <b>Designer</b>: Some some
+            <br>
+            <b>Material</b>: Some some
+            <br>
+            <b>Typology</b>: Some some
+            <br>
+            <b>Client</b>: Some some
+            <br>
+            <b>Year</b>: Some some
+        </h4>
+        <a class="view-project" href="">View project</a>
+        <div class="basket"></div>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/tabano.png"/>
+    </div>
+
+    <div class="w-3-h-3 col-lg-3 col-sm-6  offset grid-item--height3 grid-item shadow bg-white">
+        <h2 class="color-white">Louis xx</h2>
+        <h4 class="color-white">
+            <b>Designer</b>: Some some
+            <br>
+            <b>Material</b>: Some some
+            <br>
+            <b>Typology</b>: Some some
+            <br>
+            <b>Client</b>: Some some
+            <br>
+            <b>Year</b>: Some some
+        </h4>
+        <a class="view-project color-white" href="">View project</a>
+        <div class="basket"></div>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/louis.png"/>
+    </div>
+
+    <div class="w-5-h-3 col-lg-5 col-sm-6  offset grid-item--height3 grid-item shadow bg-white">
+        <h2>Tranco</h2>
+        <h4>
+            <b>Designer</b>: Some some
+            <br>
+            <b>Material</b>: Some some
+            <br>
+            <b>Typology</b>: Some some
+            <br>
+            <b>Client</b>: Some some
+            <br>
+            <b>Year</b>: Some some
+        </h4>
+        <a class="view-project" href="">View project</a>
+        <div class="basket"></div>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/tranco.png"/>
+    </div>
+
+    <div class="w-4-h-1 col-lg-4 col-sm-6  offset grid-item--height1 grid-item shadow bg-white">
+        <h2>Fiji</h2>
+        <h4>
+            <b>Designer</b>: Some some
+            <br>
+            <b>Typology</b>: Some some
+        </h4>
+        <a class="view-project" href="">View project</a>
+        <div class="basket"></div>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/fiji.png"/>
+    </div>
+
+    <div class="w-5-h-2 col-lg-5 col-sm-6  offset grid-item--height2 grid-item shadow bg-white">
+        <h2>Sesann</h2>
+        <h4>
+            <b>Designer</b>: Some some
+            <br>
+            <b>Material</b>: Some some
+            <br>
+            <b>Typology</b>: Some some
+            <br>
+            <b>Client</b>: Some some
+            <br>
+            <b>Year</b>: Some some
+        </h4>
+        <a class="view-project" href="">View project</a>
+        <div class="basket"></div>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/sesann.png"/>
+    </div>
+
+    <div class="w-3-h-2 col-lg-3 col-sm-6  offset grid-item--height2 grid-item shadow bg-white">
+        <h2>Alessi</h2>
+        <h4>
+            <b>Designer</b>: Some some
+            <br>
+            <b>Typology</b>: Some some
+        </h4>
+        <a class="view-project" href="">View project</a>
+        <div class="basket"></div>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/alessi.png"/>
+    </div>
+
+    <div id="projects-timeline" class="grid-item col-lg-4 col-sm-6  offset  grid-item--height2 shadow">
         <h2>Timeline</h2>
         <nav id="projects-time">
             <a class="color-white" href="#info">2014</a>

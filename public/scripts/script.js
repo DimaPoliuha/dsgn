@@ -1,19 +1,19 @@
 $(document).ready(function () {
-    // $('.grid').masonry({
-    //     itemSelector: '.grid-item',
-    //     columnWidth: 166.6666,
-    //     // percentPosition: true,
-    //     transitionDuration: '0.2s',
-    //     // fitWidth: true,
-    //     // horizontalOrder: true
-    // });
 
-    $('.masonry').masonry({
+    var $grid = $('.masonry').masonry({
         itemSelector: '.grid-item',
         columnWidth: '.grid-sizer',
         transitionDuration: '0.2s',
-        gutter: 20,
+        percentPosition: true,
+        stagger: 30,
         // fitWidth: true,
+    });
+
+    $grid.on( 'click', '.grid-item', function() {
+        // change size of item via class
+        $( this ).toggleClass('grid-item--gigante');
+        // trigger layout
+        $grid.masonry();
     });
       
 

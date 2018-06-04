@@ -12,6 +12,15 @@ use application\core\Model;
 
 class Main extends Model {
 
+    public function getIndex(){
+        $path = 'application/views/main/index.php';
+        if(file_exists($path)){
+            $result = require_once $path;
+            return $result;
+        }
+        return false;
+    }
+
     public function getProjects(){
         $path = 'application/views/main/projects.php';
         if(file_exists($path)){
@@ -41,6 +50,15 @@ class Main extends Model {
 
     public function getContact(){
         $path = 'application/views/main/contact.php';
+        if(file_exists($path)){
+            $result = require_once $path;
+            return $result;
+        }
+        return false;
+    }
+
+    public function getFooter(){
+        $path = 'application/views/main/footer.php';
         if(file_exists($path)){
             $result = require_once $path;
             return $result;
