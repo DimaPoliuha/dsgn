@@ -24,7 +24,7 @@ class AdminController extends Controller {
         }
 
         if(!empty($_POST)){
-            if(!$this->model->loginValidate($_POST)){
+            if(!$this->model->loginValidate()){
                 $this->view->message('Error', $this->model->error);
             }
             $_SESSION['admin'] = true;
@@ -38,8 +38,8 @@ class AdminController extends Controller {
         $this->view->redirect('/' . ROOT_URL . 'admin/login');
     }
 
-    public function postsAction(){
-        $this->view->render('Posts');
+    public function productsAction(){
+        $this->view->render('Products');
     }
 
     public function addAction(){
@@ -47,8 +47,8 @@ class AdminController extends Controller {
             if(!$this->model->productValidate('add')){
                 $this->view->message('Error', $this->model->error);
             }
-//            $id = $this->model->productAdd();
-            $id = true;
+            $id = $this->model->productAdd();
+            $this->model->productUploadImage($id);
             $this->view->message('Success', 'Product added, id: ' . $id);
         }
         $this->view->render('Add product');
@@ -64,7 +64,10 @@ class AdminController extends Controller {
         $this->view->render('Edit product');
     }
 
-    function deleteAction(){
-        $this->view->render('Delete');
+    public function deleteAction(){
+        if(!$this->model->isProductExists($this->route['id'])){
+            $this->view->errorCode(404);
+        }
+        exit("Deleted: " . $this->route['id']);
     }
 }

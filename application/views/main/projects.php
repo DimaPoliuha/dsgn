@@ -36,7 +36,7 @@
         </h4>
         <a class="view-project" href="">View project</a>
         <div class="basket"></div>
-        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/fondue.png"/>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/1.png"/>
     </div>
 
     <div class="w-4-h-1 col-lg-4 col-sm-6  offset grid-item--height1 grid-item shadow bg-white">
@@ -48,7 +48,7 @@
         </h4>
         <a class="view-project" href="">View project</a>
         <div class="basket"></div>
-        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/potter.png"/>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/2.png"/>
     </div>
 
     <div class="w-4-h-3 col-lg-4 col-sm-6  offset grid-item--height3 grid-item shadow bg-white">
@@ -66,7 +66,7 @@
         </h4>
         <a class="view-project" href="">View project</a>
         <div class="basket"></div>
-        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/tabano.png"/>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/3.png"/>
     </div>
 
     <div class="w-3-h-3 col-lg-3 col-sm-6  offset grid-item--height3 grid-item shadow bg-white">
@@ -84,7 +84,7 @@
         </h4>
         <a class="view-project color-white" href="">View project</a>
         <div class="basket"></div>
-        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/louis.png"/>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/4.png"/>
     </div>
 
     <div class="w-5-h-3 col-lg-5 col-sm-6  offset grid-item--height3 grid-item shadow bg-white">
@@ -102,7 +102,7 @@
         </h4>
         <a class="view-project" href="">View project</a>
         <div class="basket"></div>
-        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/tranco.png"/>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/5.png"/>
     </div>
 
     <div class="w-4-h-1 col-lg-4 col-sm-6  offset grid-item--height1 grid-item shadow bg-white">
@@ -114,7 +114,7 @@
         </h4>
         <a class="view-project" href="">View project</a>
         <div class="basket"></div>
-        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/fiji.png"/>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/6.png"/>
     </div>
 
     <div class="w-5-h-2 col-lg-5 col-sm-6  offset grid-item--height2 grid-item shadow bg-white">
@@ -132,7 +132,7 @@
         </h4>
         <a class="view-project" href="">View project</a>
         <div class="basket"></div>
-        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/sesann.png"/>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/7.png"/>
     </div>
 
     <div class="w-3-h-2 col-lg-3 col-sm-6  offset grid-item--height2 grid-item shadow bg-white">
@@ -144,7 +144,7 @@
         </h4>
         <a class="view-project" href="">View project</a>
         <div class="basket"></div>
-        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/alessi.png"/>
+        <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/8.png"/>
     </div>
 
     <div id="projects-timeline" class="grid-item col-lg-4 col-sm-6  offset  grid-item--height2 shadow">

@@ -9,16 +9,18 @@
 namespace application\models;
 
 use application\core\Model;
+use const application\core\ROOT_URL;
+use Imagick;
 
 class Admin extends Model {
 
     public $error;
 
-    public function loginValidate($post){
+    public function loginValidate(){
         $path = "application/config/admin.php";
         if(file_exists($path)){
             $config = require_once $path;
-            if($config['login'] != $post['login'] or $config['password'] != $post['password']){
+            if($config['login'] != $_POST['login'] or $config['password'] != $_POST['password']){
                 $this->error = 'Login or password uncorrect!';
                 return false;
             }
@@ -32,27 +34,11 @@ class Admin extends Model {
     public function productValidate($type){
 
         $titleLength = strlen($_POST['title']);
-        $designerLength = strlen($_POST['designer']);
-        $materialLength = strlen($_POST['material']);
-        $typologyLength = strlen($_POST['typology']);
-        $clientLength = strlen($_POST['client']);
         $descriptionLength = strlen($_POST['description']);
 
         if($titleLength < 3 or $titleLength > 15){
             $this->error = "Title must consist from 3 to 15 symbols";
             return false;
-//        } else if($designerLength < 3 or $designerLength > 20){
-//            $this->error = "Designer must consist from 3 to 20 symbols";
-//            return false;
-//        } else if($materialLength < 3 or $materialLength > 20){
-//            $this->error = "Material must consist from 3 to 20 symbols";
-//            return false;
-//        } else if($typologyLength < 3 or $typologyLength > 20){
-//            $this->error = "Typology must consist from 3 to 20 symbols";
-//            return false;
-//        } else if($clientLength < 3 or $clientLength > 20){
-//            $this->error = "Client must consist from 3 to 20 symbols";
-//            return false;
         } else if($descriptionLength > 300){
             $this->error = "Description must consist up to 300 symbols";
             return false;
@@ -64,24 +50,43 @@ class Admin extends Model {
         return true;
     }
 
-//    public function productAdd(){
-//
-//        $params = [
-//            'title' => $_POST['title'],
-//            'project_type_id' => $_POST['project_type'],
-//            'year_id' => $_POST['year'],
-//            'designer_id' => $_POST['designer'],
-//            'typology_id' => $_POST['typology'],
-//            'client_id' => $_POST['client'],
-//            'description' => $_POST['description'],
-//            'style_id' => $_POST['style'],
-//        ];
-//
-//        $this->db
-//            ->insert("title", "project_type_id", "year_id", "designer_id", "typology_id", "client_id", "description", "style_id")
-//            ->into("projects")
-//            ->values(":title", ":project_type_id", ":year_id", ":designer_id", ":typology_id", ":client_id", ":description", ":style_id")
-//            ->execute($params);
-//        return $this->db->lastInsertId();
-//    }
+    public function productAdd(){
+
+        $params = [
+            'title' => $_POST['title'],
+            'project_type_id' => $_POST['project_type'],
+            'year_id' => $_POST['year'],
+            'designer_id' => $_POST['designer'],
+            'typology_id' => $_POST['typology'],
+            'client_id' => $_POST['client'],
+            'description' => $_POST['description'],
+            'style_id' => $_POST['style'],
+        ];
+
+        $this->db
+            ->insert("title", "project_type_id", "year_id", "designer_id", "typology_id", "client_id", "description", "style_id")
+            ->into("projects")
+            ->values(":title", ":project_type_id", ":year_id", ":designer_id", ":typology_id", ":client_id", ":description", ":style_id")
+            ->execute($params);
+        return $this->db->lastInsertId();
+    }
+
+    public function productUploadImage($id){
+        $path = $_FILES['img']['tmp_name'];
+//        $img = new Imagick($path);
+//        $img->setImageCompressionQuality(80);
+//        $img->writeImage('public/images/' . $id . '.png');
+        move_uploaded_file($path, 'public/images/' . $id . '.png');
+    }
+
+    public function isProductExists($id){
+        $params = [
+            'id' => $id,
+        ];
+        return $this->db
+            ->select('id')
+            ->from('projects')
+            ->where('id', '=', ':id')
+            ->execute($params);
+    }
 }

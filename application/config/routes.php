@@ -74,9 +74,9 @@ return [
         'action' => 'add'
     ],
 
-    'admin/posts' => [
+    'admin/products' => [
         'controller' => 'admin',
-        'action' => 'posts'
+        'action' => 'products'
     ],
 
     'admin/edit/{id:\d+}' => [

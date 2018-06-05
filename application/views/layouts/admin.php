@@ -24,7 +24,7 @@
 <body class="fixed-nav sticky-footer bg-dark">
 <?php if ($this->route['action'] != 'login'): ?>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <a class="navbar-brand" href="/<?php echo \application\core\ROOT_URL?>admin/posts">Admin panel</a>
+        <a class="navbar-brand" href="/<?php echo \application\core\ROOT_URL?>admin/products">Admin panel</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/<?php echo \application\core\ROOT_URL?>admin/posts">
+                    <a class="nav-link" href="/<?php echo \application\core\ROOT_URL?>admin/products">
                         <i class="fa fa-fw fa-list"></i>
                         <span class="nav-link-text">Products</span>
                     </a>
