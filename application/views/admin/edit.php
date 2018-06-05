@@ -5,3 +5,66 @@
  * Date: 27.05.2018
  * Time: 12:36
  */
+?>
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="card mb-3">
+            <div class="card-header"><?php echo $title; ?></div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <form action="/<?php echo \application\core\ROOT_URL?>admin/edit" method="post">
+                            <div class="form-group">
+                                <label>Title</label>
+                                <input class="form-control" type="text" name="title">
+                            </div>
+                            <div class="form-group">
+                                <label>Designer</label>
+                                <input class="form-control" type="text" name="designer">
+                            </div>
+                            <div class="form-group">
+                                <label>Typology</label>
+                                <input class="form-control" type="text" name="typology">
+                            </div>
+                            <div class="form-group">
+                                <label>Client</label>
+                                <input class="form-control" type="text" name="client">
+                            </div>
+                            <div class="form-group">
+                                <label>Year</label>
+                                <select class="form-control" name="year">
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea class="form-control" rows="3" name="description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Style</label>
+                                <select class="form-control" name="style">
+                                    <option value="w-4-h-3">w-4-h-3</option>
+                                    <option value="w-4-h-1">w-4-h-1</option>
+                                    <option value="w-3-h-3">w-3-h-3</option>
+                                    <option value="w-5-h-3">w-5-h-3</option>
+                                    <option value="w-5-h-2">w-5-h-2</option>
+                                    <option value="w-3-h-2">w-3-h-2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Image</label>
+                                <input class="form-control" type="file" name="img">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Edit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

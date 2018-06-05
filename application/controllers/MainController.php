@@ -24,7 +24,6 @@ class MainController extends Controller {
         }
         $this->model->getStudio();
         $this->model->getNews();
-        $this->model->getContact();
         $this->model->getFooter();
     }
 
@@ -49,6 +48,13 @@ class MainController extends Controller {
     }
 
     public function contactAction(){
+        if(!empty($_POST)){
+            if(!$this->model->contactValidate()){
+                $this->view->message('Error', $this->model->formError);
+            }
+            mail('7optimus7@ukr.net', 'Message from contact form', $_POST['name'] . ',' . $_POST['email'] . ',' . $_POST['text']);
+            $this->view->message('Success!', 'Thanks, we will contact you in 7 days.');
+        }
         $this->view->render('Contact us');
         $this->model->getContact();
         $this->model->getFooter();

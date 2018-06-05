@@ -12,6 +12,8 @@ use application\core\Model;
 
 class Main extends Model {
 
+    public $formError;
+
     public function getIndex(){
         $path = 'application/views/main/index.php';
         if(file_exists($path)){
@@ -55,6 +57,22 @@ class Main extends Model {
             return $result;
         }
         return false;
+    }
+
+    public function contactValidate(){
+        $nameLength = strlen($_POST['name']);
+        $textLength = strlen($_POST['text']);
+        if($nameLength < 3 or $nameLength > 20){
+            $this->formError = "Name must consist from 3 to 20 symbols";
+            return false;
+        } else if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+            $this->formError = "Check e-mail";
+            return false;
+        } else if($textLength < 10 or $textLength > 1000){
+            $this->formError = "Text must consist from 10 to 1000 symbols";
+            return false;
+        }
+        return true;
     }
 
     public function getFooter(){

@@ -74,12 +74,17 @@ return [
         'action' => 'add'
     ],
 
-    'admin/edit' => [
+    'admin/posts' => [
+        'controller' => 'admin',
+        'action' => 'posts'
+    ],
+
+    'admin/edit/{id:\d+}' => [
         'controller' => 'admin',
         'action' => 'edit'
     ],
 
-    'admin/delete' => [
+    'admin/delete/{id:\d+}' => [
         'controller' => 'admin',
         'action' => 'delete'
     ],

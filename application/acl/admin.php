@@ -9,21 +9,13 @@
 return [
     'all' => [
         'login',
-        'logout',
-        'add',
-        'edit',
-        'delete',
     ],
     'authorize' => [
         'login',
-        'logout',
-        'add',
-        'edit',
-        'delete',
     ],
     'admin' => [
-        'login',
         'logout',
+        'posts',
         'add',
         'edit',
         'delete',

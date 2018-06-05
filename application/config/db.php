@@ -8,7 +8,7 @@
 
 return [
     'host' => 'localhost',
-    'dbname' => 'test',
+    'dbname' => 'dsgn',
     'charset' => 'utf8',
     'user' => 'root',
     'password' => '',
