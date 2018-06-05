@@ -9,7 +9,7 @@
 namespace application\models;
 
 use application\core\Model;
-use const application\core\ROOT_URL;
+use application\lib\Db;
 use Imagick;
 
 class Admin extends Model {
@@ -62,7 +62,7 @@ class Admin extends Model {
             'description' => $_POST['description'],
             'style_id' => $_POST['style'],
         ];
-
+        $this->db = new Db();
         $this->db
             ->insert("title", "project_type_id", "year_id", "designer_id", "typology_id", "client_id", "description", "style_id")
             ->into("projects")
@@ -80,13 +80,20 @@ class Admin extends Model {
     }
 
     public function isProductExists($id){
-        $params = [
-            'id' => $id,
-        ];
+        $this->db = new Db();
         return $this->db
             ->select('id')
             ->from('projects')
-            ->where('id', '=', ':id')
-            ->execute($params);
+            ->where('id', '=', $id)
+            ->execute();
+    }
+
+    public function deleteProduct($id){
+        $this->db = new Db();
+        $this->db
+            ->delete("projects")
+            ->where("id", "=", $id)
+            ->execute();
+        unlink('public/images/' . $id . '.png');
     }
 }

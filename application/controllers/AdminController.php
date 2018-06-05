@@ -55,19 +55,28 @@ class AdminController extends Controller {
     }
 
     public function editAction(){
+        $id = $this->route['id'];
+        if(!$this->model->isProductExists($id)){
+            $this->view->errorCode(404);
+        }
         if(!empty($_POST)){
             if(!$this->model->productValidate('edit')){
                 $this->view->message('Error', $this->model->error);
             }
             $this->view->message('Success', 'Product edited');
         }
-        $this->view->render('Edit product');
+        $vars = [
+            'data' => '',
+        ];
+        $this->view->render('Edit product', $vars);
     }
 
     public function deleteAction(){
-        if(!$this->model->isProductExists($this->route['id'])){
+        $id = $this->route['id'];
+        if(!$this->model->isProductExists($id)){
             $this->view->errorCode(404);
         }
-        exit("Deleted: " . $this->route['id']);
+        $this->model->deleteProduct($id);
+        $this->view->redirect('/' . ROOT_URL . 'admin/products');
     }
 }

@@ -9,6 +9,7 @@
 namespace application\lib;
 
 use PDO;
+use Exception;
 
 class Db {
 
@@ -31,7 +32,7 @@ class Db {
     public function __construct() {
         $path = 'application/config/db.php';
         if(file_exists($path)){
-            $config = require_once $path;
+            $config = require $path;
         }
         $this->db = new PDO("mysql:host={$config['host']};dbname={$config['dbname']};charset={$config['charset']}", $config['user'], $config['password']);
     }
