@@ -21,28 +21,52 @@
                             </div>
                             <div class="form-group">
                                 <label>Project type</label>
-                                <input class="form-control" type="number" name="project_type">
+                                <select class="form-control" name="project_type">
+                                    <?php
+                                    foreach ($project_type as $key => $value) {
+                                        echo "<option value='{$value['id']}'>{$value['type']}</option>";
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>Designer</label>
-                                <input class="form-control" type="number" name="designer">
+                                <select class="form-control" name="designer">
+                                    <?php
+                                    foreach ($designer as $key => $value) {
+                                        echo "<option value='{$value['id']}'>{$value['surname']} {$value['name']}</option>";
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>Typology</label>
-                                <input class="form-control" type="number" name="typology">
+                                <select class="form-control" name="typology">
+                                    <?php
+                                    foreach ($typology as $key => $value) {
+                                        echo "<option value='{$value['id']}'>{$value['type']}</option>";
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>Client</label>
-                                <input class="form-control" type="number" name="client">
+                                <select class="form-control" name="client">
+                                    <?php
+                                    foreach ($client as $key => $value) {
+                                        echo "<option value='{$value['id']}'>{$value['surname']} {$value['name']}</option>";
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>Year</label>
                                 <select class="form-control" name="year">
-                                    <option value="1">2014</option>
-                                    <option value="2">2015</option>
-                                    <option value="3">2016</option>
-                                    <option value="4">2017</option>
-                                    <option value="5">2018</option>
+                                    <?php
+                                    foreach ($year as $key => $value) {
+                                        echo "<option value='{$value['id']}'>{$value['year']}</option>";
+                                    }
+                                    ?>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -52,12 +76,11 @@
                             <div class="form-group">
                                 <label>Style</label>
                                 <select class="form-control" name="style">
-                                    <option value="1">w-4-h-3</option>
-                                    <option value="2">w-4-h-1</option>
-                                    <option value="3">w-3-h-3</option>
-                                    <option value="4">w-5-h-3</option>
-                                    <option value="5">w-5-h-2</option>
-                                    <option value="6">w-3-h-2</option>
+                                    <?php
+                                    foreach ($style as $key => $value) {
+                                        echo "<option value='{$value['id']}'>{$value['style']}</option>";
+                                    }
+                                    ?>
                                 </select>
                             </div>
                             <div class="form-group">

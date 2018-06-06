@@ -51,7 +51,15 @@ class AdminController extends Controller {
             $this->model->productUploadImage($id);
             $this->view->message('Success', 'Product added, id: ' . $id);
         }
-        $this->view->render('Add product');
+        $vars = [
+            'project_type' => $this->model->projectType(),
+            'year' => $this->model->year(),
+            'designer' => $this->model->designer(),
+            'typology' => $this->model->typology(),
+            'client' => $this->model->client(),
+            'style' => $this->model->style(),
+        ];
+        $this->view->render('Add product', $vars);
     }
 
     public function editAction(){
@@ -63,10 +71,20 @@ class AdminController extends Controller {
             if(!$this->model->productValidate('edit')){
                 $this->view->message('Error', $this->model->error);
             }
+            $this->model->editProduct($id);
+            if($_FILES['img']['tmp_name']){
+                $this->model->productUploadImage($id);
+            }
             $this->view->message('Success', 'Product edited');
         }
         $vars = [
-            'data' => '',
+            'data' => $this->model->productData($id)[0],
+            'project_type' => $this->model->projectType(),
+            'year' => $this->model->year(),
+            'designer' => $this->model->designer(),
+            'typology' => $this->model->typology(),
+            'client' => $this->model->client(),
+            'style' => $this->model->style(),
         ];
         $this->view->render('Edit product', $vars);
     }

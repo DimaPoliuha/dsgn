@@ -15,7 +15,17 @@ return [
         'action' => 'index'
     ],
 
+    '/{page:\d+}' => [
+        'controller' => 'main',
+        'action' => 'index'
+    ],
+
     'projects' => [
+        'controller' => 'main',
+        'action' => 'projects'
+    ],
+
+    'projects/{page:\d+}' => [
         'controller' => 'main',
         'action' => 'projects'
     ],

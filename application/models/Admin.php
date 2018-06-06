@@ -96,4 +96,87 @@ class Admin extends Model {
             ->execute();
         unlink('public/images/' . $id . '.png');
     }
+
+    public function editProduct($id){
+        $params = [
+            'title' => $_POST['title'],
+            'project_type_id' => $_POST['project_type'],
+            'year_id' => $_POST['year'],
+            'designer_id' => $_POST['designer'],
+            'typology_id' => $_POST['typology'],
+            'client_id' => $_POST['client'],
+            'description' => $_POST['description'],
+            'style_id' => $_POST['style'],
+        ];
+        $this->db = new Db();
+        $this->db
+            ->update("projects")
+            ->set("title", ":title")
+            ->set("project_type_id", ":project_type_id")
+            ->set("year_id", ":year_id")
+            ->set("designer_id", ":designer_id")
+            ->set("typology_id", ":typology_id")
+            ->set( "client_id", ":client_id")
+            ->set("description", ":description")
+            ->set("style_id", ":style_id")
+            ->where("id", "=", $id)
+            ->execute($params);
+    }
+
+    public function productData($id){
+        $this->db = new Db();
+        return $this->db
+            ->select()
+            ->from('projects')
+            ->where('id', '=', $id)
+            ->execute();
+    }
+
+    public function projectType(){
+        $this->db = new Db();
+        return $this->db
+            ->select()
+            ->from('project_type')
+            ->execute();
+    }
+
+    public function year(){
+        $this->db = new Db();
+        return $this->db
+            ->select()
+            ->from('years')
+            ->execute();
+    }
+
+    public function designer(){
+        $this->db = new Db();
+        return $this->db
+            ->select()
+            ->from('designers')
+            ->execute();
+    }
+
+    public function typology(){
+        $this->db = new Db();
+        return $this->db
+            ->select()
+            ->from('typology')
+            ->execute();
+    }
+
+    public function client(){
+        $this->db = new Db();
+        return $this->db
+            ->select()
+            ->from('clients')
+            ->execute();
+    }
+
+    public function style(){
+        $this->db = new Db();
+        return $this->db
+            ->select()
+            ->from('style')
+            ->execute();
+    }
 }
