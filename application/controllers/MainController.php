@@ -9,30 +9,35 @@
 namespace application\controllers;
 
 use application\core\Controller;
+use application\lib\Pagination;
 
 class MainController extends Controller {
 
     public function indexAction(){
-//        $vars = [
-//            'projects' => $result,
-//        ];
-//        $this->view->render('Home', $vars);
-        $this->view->render('Home');
+
+        $vars = [
+            'list' => $this->model->productsList(0, 8),
+        ];
+
+        $this->view->render('Home', $vars);
         $this->model->getIndex();
-        if(!$this->model->getProjects()){
-            $this->model->getProjects();
-        }
         $this->model->getStudio();
-        $this->model->getNews();
+//        $this->model->getNews();
         $this->model->getFooter();
     }
 
     public function projectsAction(){
-        $this->view->render('Projects');
+        $productsOnPage = 6;
+        $pagination = new Pagination($this->route, $this->model->productsCount(), $productsOnPage);
+        $vars = [
+            'pagination' => $pagination->get(),
+            'list' => $this->model->productsList($this->route, $productsOnPage),
+        ];
+        $this->view->render('Projects', $vars);
         if(!$this->model->getProjects()){
             $this->model->getProjects();
         }
-        $this->model->getFooter();
+//        $this->model->getFooter();
     }
 
     public function studioAction(){

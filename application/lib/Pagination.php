@@ -8,6 +8,8 @@
 
 namespace application\lib;
 
+use const application\core\ROOT_URL;
+
 class Pagination {
     
     private $max = 10;
@@ -38,10 +40,10 @@ class Pagination {
         }
         if (!is_null($links)) {
             if ($this->current_page > 1) {
-                $links = $this->generateHtml(1, 'Вперед').$links;
+                $links = $this->generateHtml(1, 'First').$links;
             }
             if ($this->current_page < $this->amount) {
-                $links .= $this->generateHtml($this->amount, 'Назад');
+                $links .= $this->generateHtml($this->amount, 'Last');
             }
         }
         $html .= $links.' </ul></nav>';
@@ -52,7 +54,7 @@ class Pagination {
         if (!$text) {
             $text = $page;
         }
-        return '<li class="page-item"><a class="page-link" href="/'.$this->route['controller'].'/'.$this->route['action'].'/'.$page.'">'.$text.'</a></li>';
+        return '<li class="page-item"><a class="page-link" href="/'. ROOT_URL .$this->route['action'].'/'.$page.'">'.$text.'</a></li>';
     }
 
     private function limits() {

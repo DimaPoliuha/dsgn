@@ -70,10 +70,10 @@
                                     <?php
                                     foreach ($client as $key => $value) {
                                         if($value['id'] == $data['client_id']){
-                                            echo "<option selected value='{$value['id']}'>{$value['surname']} {$value['name']}</option>";
+                                            echo "<option selected value='{$value['id']}'>{$value['cl_surname']} {$value['cl_name']}</option>";
                                         }
                                         else{
-                                            echo "<option value='{$value['id']}'>{$value['surname']} {$value['name']}</option>";
+                                            echo "<option value='{$value['id']}'>{$value['cl_surname']} {$value['cl_name']}</option>";
                                         }
                                     }
                                     ?>

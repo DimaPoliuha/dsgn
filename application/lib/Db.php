@@ -292,11 +292,15 @@ class Db {
     public function limit(string $limit): self {
         $this->checkCommandOrder(__FUNCTION__);
 
-        $this->statement .= "LIMIT ";
+        if ($this->previousCommand != "LIMIT ")
+            $this->statement .= "LIMIT ";
+        else
+            $this->statement .= ', ';
+
         $this->statement .= $limit . ' ';
 
         $this->previousCommand = "LIMIT ";
-        $this->expectedCommands = [];
+        $this->expectedCommands = ["LIMIT "];
         return $this;
     }
 

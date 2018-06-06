@@ -54,7 +54,7 @@
                                 <select class="form-control" name="client">
                                     <?php
                                     foreach ($client as $key => $value) {
-                                        echo "<option value='{$value['id']}'>{$value['surname']} {$value['name']}</option>";
+                                        echo "<option value='{$value['id']}'>{$value['cl_surname']} {$value['cl_name']}</option>";
                                     }
                                     ?>
                                 </select>

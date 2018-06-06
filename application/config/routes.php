@@ -15,7 +15,7 @@ return [
         'action' => 'index'
     ],
 
-    '/{page:\d+}' => [
+    '{page:\d+}' => [
         'controller' => 'main',
         'action' => 'index'
     ],
