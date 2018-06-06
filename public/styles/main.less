@@ -389,18 +389,27 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
         flex-direction: column;
         justify-content: flex-start;
 		align-items: flex-start;
-		
-		a{
-			&:hover{
-				color: @gray;
-				transition: 0.2s;
+
+		nav{
+			a{
+				&:hover{
+					color: @gray;
+					transition: 0.2s;
+				}
 			}
 		}
 	}
 
-	h1{
-		margin-top: 15%;
-		margin-left: 25%;
+	.proj-btn{
+		color: @white;
+		position: absolute;
+		font-size: 30px;
+		top: 58%;
+		left: 48%;
+		&:hover{
+			color: @gray;
+			transition: 0.2s;
+		}
 	}
 }
 
@@ -877,6 +886,15 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 	background-size: 100% 100%;
 	padding-left: 15%;
 	padding-top: 21%;
+
+	a{
+		color: @white;
+		font-size: 30px;
+		&:hover{
+			color: @gray;
+			transition: 0.2s;
+		}
+	}
 }
 
 #studio-about {

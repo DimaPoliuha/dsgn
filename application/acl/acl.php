@@ -18,6 +18,7 @@ return [
         'logout',
         'profile',
         'project',
+        'filter'
     ],
     'authorize' => [
         'index',
@@ -30,6 +31,7 @@ return [
         'logout',
         'profile',
         'project',
+        'filter'
     ],
     'admin' => [
         'index',
@@ -42,5 +44,6 @@ return [
         'logout',
         'profile',
         'project',
+        'filter'
     ],
 ];

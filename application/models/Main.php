@@ -27,7 +27,7 @@ class Main extends Model {
     public function getProjects(){
         $path = 'application/views/main/projects.php';
         if(file_exists($path)){
-            $result = require_once $path;
+            $result = require $path;
             return $result;
         }
         return false;
@@ -120,6 +120,28 @@ class Main extends Model {
             ->innerJoin('style')
             ->on("projects.style_id", "=", "style.id")
             ->where('projects.id', '=', $id)
+            ->execute();
+    }
+
+    public function filterProductsList($route){
+        $this->db = new Db();
+//        debug($route['filter']);
+        return $this->db
+            ->select('projects.id', 'projects.title', 'project_type.type', 'years.year', 'designers.surname', 'designers.name', 'typology.type', 'clients.cl_surname', 'clients.cl_name', 'projects.description', 'style.style', 'projects.price')
+            ->from('projects')
+            ->innerJoin('project_type')
+            ->on("projects.project_type_id", "=", "project_type.id")
+            ->innerJoin('years')
+            ->on("projects.year_id", "=", "years.id")
+            ->innerJoin('designers')
+            ->on("projects.designer_id", "=", "designers.id")
+            ->innerJoin('typology')
+            ->on("projects.typology_id", "=", "typology.id")
+            ->innerJoin('clients')
+            ->on("projects.client_id", "=", "clients.id")
+            ->innerJoin('style')
+            ->on("projects.style_id", "=", "style.id")
+            ->where('projects.project_type_id', '=', $route['filter'])
             ->execute();
     }
 

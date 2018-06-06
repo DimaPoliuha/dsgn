@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row">
         <div id="studio-main" class="col-lg-4  offset grid-item--height3 shadow">
-            <h1 class="color-white">Studio</h1>
+            <a href="/<?php echo \application\core\ROOT_URL?>studio">Studio</a>
         </div>
         <div class="col-lg-8  offset grid-item--height3 shadow bg-white">
             <div id="studio-about">

@@ -9,12 +9,12 @@ $(document).ready(function () {
         // fitWidth: true,
     });
 
-    $grid.on( 'click', '.grid-item', function() {
-        // change size of item via class
-        $( this ).toggleClass('grid-item--gigante');
-        // trigger layout
-        $grid.masonry();
-    });
+    // $grid.on( 'click', '.grid-item', function() {
+    //     // change size of item via class
+    //     $( this ).toggleClass('grid-item--gigante');
+    //     // trigger layout
+    //     $grid.masonry();
+    // });
       
 
     var slideout = new Slideout({

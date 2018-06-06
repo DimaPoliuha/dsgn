@@ -13,17 +13,17 @@
     <div class="grid-sizer col-lg-1 col-sm-6"></div>
     <div id="projects-main" class="grid-item col-lg-4 offset grid-item--height3 shadow">
         <nav id="projects-type">
-            <a class="color-white" href="#info">All</a>
-            <a class="color-white" href="#info">House</a>
-            <a class="color-white" href="#form">Commercial</a>
-            <a class="color-white" href="#courses">Personal</a>
-            <a class="color-white" href="#vacancies">Studio lab</a>
+            <a class="color-white" href="/<?php echo \application\core\ROOT_URL?>projects">All</a>
+            <a class="color-white" href="/<?php echo \application\core\ROOT_URL?>projects/filter/1">House</a>
+            <a class="color-white" href="/<?php echo \application\core\ROOT_URL?>projects/filter/2">Commercial</a>
+            <a class="color-white" href="/<?php echo \application\core\ROOT_URL?>projects/filter/3">Personal</a>
+            <a class="color-white" href="/<?php echo \application\core\ROOT_URL?>projects/filter/4">Studio lab</a>
         </nav>
-        <h1 class="color-white">Projects</h1>
+        <a class="proj-btn" href="/<?php echo \application\core\ROOT_URL?>projects">Projects</a>
     </div>
 
     <?php
-//    debug($list);
+//    debug($vars);
     ?>
     <?php if(empty($list)): ?>
         <div class="w-4-h-3 col-lg-4 col-sm-6  offset grid-item--height3 grid-item shadow">

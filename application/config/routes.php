@@ -25,6 +25,11 @@ return [
         'action' => 'projects'
     ],
 
+    'projects/filter/{filter:\d+}' => [
+        'controller' => 'main',
+        'action' => 'filter'
+    ],
+
     'project/{project:\d+}' => [
         'controller' => 'main',
         'action' => 'project'

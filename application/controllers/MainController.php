@@ -41,6 +41,16 @@ class MainController extends Controller {
 //        $this->model->getFooter();
     }
 
+    public function filterAction(){
+        $vars = [
+            'list' => $this->model->filterProductsList($this->route),
+        ];
+        if($this->route['filter'] > 4 or $this->route['filter'] < 1){
+            $this->view->errorCode(404);
+        }
+        $this->view->render('Projects', $vars);
+    }
+
     public function projectAction(){
         $id = $this->route['project'];
         $adminModel = new Admin();
