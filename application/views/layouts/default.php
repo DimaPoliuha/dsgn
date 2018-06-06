@@ -63,13 +63,13 @@
                             <input type="submit" id="menu-btn" name="" value=""/>
                         </div>
                         <ul class="drop-menu menu-2">
-                            <li><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>contact">Contact</a></li>
-                            <li><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>news">News</a></li>
-                            <li><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>studio">Studio</a></li>
-                            <li><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>projects">Projects</a></li>
-                            <li><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>">Home</a></li>
-                            <li><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>login">Log in</a></li>
-                            <li><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>register">Register</a></li>
+                            <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>contact";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>contact">Contact</a></li>
+                            <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>news";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>news">News</a></li>
+                            <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>studio";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>studio">Studio</a></li>
+                            <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>projects";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>projects">Projects</a></li>
+                            <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>">Home</a></li>
+                            <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>login";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>login">Log in</a></li>
+                            <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>register";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>register">Register</a></li>
                         </ul>
                     </li>
                 </ul>
