@@ -84,6 +84,10 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label>Price</label>
+                                <input class="form-control" type="number" step=".01" name="price">
+                            </div>
+                            <div class="form-group">
                                 <label>Image</label>
                                 <input class="form-control" type="file" name="img">
                             </div>

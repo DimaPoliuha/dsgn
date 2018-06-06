@@ -114,6 +114,10 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label>Price</label>
+                                <input class="form-control" type="number" name="price" step=".01" value="<?php echo $data['price']; ?>">
+                            </div>
+                            <div class="form-group">
                                 <label>Image</label>
                                 <input class="form-control" type="file" name="img">
                             </div>

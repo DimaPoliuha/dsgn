@@ -61,12 +61,13 @@ class Admin extends Model {
             'client_id' => $_POST['client'],
             'description' => $_POST['description'],
             'style_id' => $_POST['style'],
+            'price' => $_POST['price'],
         ];
         $this->db = new Db();
         $this->db
-            ->insert("title", "project_type_id", "year_id", "designer_id", "typology_id", "client_id", "description", "style_id")
+            ->insert("title", "project_type_id", "year_id", "designer_id", "typology_id", "client_id", "description", "style_id", "price")
             ->into("projects")
-            ->values(":title", ":project_type_id", ":year_id", ":designer_id", ":typology_id", ":client_id", ":description", ":style_id")
+            ->values(":title", ":project_type_id", ":year_id", ":designer_id", ":typology_id", ":client_id", ":description", ":style_id", ":price")
             ->execute($params);
         return $this->db->lastInsertId();
     }
@@ -107,6 +108,7 @@ class Admin extends Model {
             'client_id' => $_POST['client'],
             'description' => $_POST['description'],
             'style_id' => $_POST['style'],
+            'price' => $_POST['price'],
         ];
         $this->db = new Db();
         $this->db
@@ -119,6 +121,7 @@ class Admin extends Model {
             ->set( "client_id", ":client_id")
             ->set("description", ":description")
             ->set("style_id", ":style_id")
+            ->set("price", ":price")
             ->where("id", "=", $id)
             ->execute($params);
     }

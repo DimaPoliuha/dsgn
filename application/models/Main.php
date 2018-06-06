@@ -97,7 +97,7 @@ class Main extends Model {
         $start = (($route['page'] ?? 1) - 1) * $max;
         $this->db = new Db();
         return $this->db
-            ->select('projects.id', 'projects.title', 'project_type.type', 'years.year', 'designers.surname', 'designers.name', 'typology.type', 'clients.cl_surname', 'clients.cl_name', 'projects.description', 'style.style')
+            ->select('projects.id', 'projects.title', 'project_type.type', 'years.year', 'designers.surname', 'designers.name', 'typology.type', 'clients.cl_surname', 'clients.cl_name', 'projects.description', 'style.style', 'projects.price')
             ->from('projects')
             ->innerJoin('project_type')
             ->on("projects.project_type_id", "=", "project_type.id")
