@@ -31,21 +31,22 @@
         </div>
     <?php else: ?>
         <?php foreach ($list as $item): ?>
-                <div class="grid-item <?php echo $item['style']; ?> col-sm-6 offset shadow">
-                    <h2><?php echo $item['title']; ?></h2>
-                    <h4>
-                        <b>Designer</b>: <?php echo $item['surname'] . ' ' . $item['name']; ?>
-                        <br>
-                        <b>Typology</b>: <?php echo $item['type']; ?>
-                        <br>
-                        <b>Client</b>: <?php echo $item['cl_surname'] . ' ' . $item['cl_name']; ?>
-                        <br>
-                        <b>Year</b>: <?php echo $item['year']; ?>
-                    </h4>
-                    <h3 class="view-project">Price: <?php echo $item['price']; ?>$</h3>
-                    <div class="basket"></div>
-                    <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/<?php echo $item['id']; ?>.png"/>
-                </div>
+            <div class="grid-item <?php echo $item['style']; ?> offset shadow">
+                <h2><?php echo $item['title']; ?></h2>
+                <h4>
+                    <b>Designer</b>: <?php echo $item['surname'] . ' ' . $item['name']; ?>
+                    <br>
+                    <b>Typology</b>: <?php echo $item['type']; ?>
+                    <br>
+                    <b>Client</b>: <?php echo $item['cl_surname'] . ' ' . $item['cl_name']; ?>
+                    <br>
+                    <b>Year</b>: <?php echo $item['year']; ?>
+                </h4>
+                <h3>Price: <?php echo $item['price']; ?>$</h3>
+                <a href="/<?php echo \application\core\ROOT_URL?>project/<?php echo $item['id']?>">View project</a>
+                <div class="basket"></div>
+                <img src="/<?php echo \application\core\ROOT_URL?>public/images/<?php echo $item['id']; ?>.png"/>
+            </div>
         <?php endforeach;?>
     <?php endif;?>
 <!--    <div class="w-4-h-3 col-lg-4 col-sm-6  offset grid-item--height3 grid-item shadow">-->

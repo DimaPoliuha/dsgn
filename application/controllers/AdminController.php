@@ -10,6 +10,8 @@ namespace application\controllers;
 
 use application\core\Controller;
 use const application\core\ROOT_URL;
+use application\lib\Pagination;
+use application\models\Main;
 
 class AdminController extends Controller {
 
@@ -39,7 +41,14 @@ class AdminController extends Controller {
     }
 
     public function productsAction(){
-        $this->view->render('Products');
+        $mainModel = new Main;
+        $productsOnPage = 100;
+        $pagination = new Pagination($this->route, $mainModel->productsCount(), $productsOnPage);
+        $vars = [
+            'pagination' => $pagination->get(),
+            'list' => $mainModel->productsList($this->route, $productsOnPage),
+        ];
+        $this->view->render('Projects', $vars);
     }
 
     public function addAction(){

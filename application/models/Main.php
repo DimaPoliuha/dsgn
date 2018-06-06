@@ -33,6 +33,15 @@ class Main extends Model {
         return false;
     }
 
+    public function getProject(){
+        $path = 'application/views/main/project.php';
+        if(file_exists($path)){
+            $result = require_once $path;
+            return $result;
+        }
+        return false;
+    }
+
     public function getStudio(){
         $path = 'application/views/main/studio.php';
         if(file_exists($path)){
@@ -91,6 +100,27 @@ class Main extends Model {
             ->select()
             ->from('projects')
             ->execute());
+    }
+
+    public function productData($id){
+        $this->db = new Db();
+        return $this->db
+            ->select('projects.id', 'projects.title', 'project_type.type', 'years.year', 'designers.surname', 'designers.name', 'typology.type', 'clients.cl_surname', 'clients.cl_name', 'projects.description', 'style.style', 'projects.price')
+            ->from('projects')
+            ->innerJoin('project_type')
+            ->on("projects.project_type_id", "=", "project_type.id")
+            ->innerJoin('years')
+            ->on("projects.year_id", "=", "years.id")
+            ->innerJoin('designers')
+            ->on("projects.designer_id", "=", "designers.id")
+            ->innerJoin('typology')
+            ->on("projects.typology_id", "=", "typology.id")
+            ->innerJoin('clients')
+            ->on("projects.client_id", "=", "clients.id")
+            ->innerJoin('style')
+            ->on("projects.style_id", "=", "style.id")
+            ->where('projects.id', '=', $id)
+            ->execute();
     }
 
     public function productsList($route, $max){

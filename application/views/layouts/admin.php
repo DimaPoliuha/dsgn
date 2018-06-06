@@ -33,13 +33,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/<?php echo \application\core\ROOT_URL?>admin/add">
                         <i class="fa fa-fw fa-plus"></i>
-                        <span class="nav-link-text">Add product</span>
+                        <span class="nav-link-text">Add project</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/<?php echo \application\core\ROOT_URL?>admin/products">
                         <i class="fa fa-fw fa-list"></i>
-                        <span class="nav-link-text">Products</span>
+                        <span class="nav-link-text">Projects</span>
                     </a>
                 </li>
                 <li class="nav-item">

@@ -15,11 +15,6 @@ return [
         'action' => 'index'
     ],
 
-    '{page:\d+}' => [
-        'controller' => 'main',
-        'action' => 'index'
-    ],
-
     'projects' => [
         'controller' => 'main',
         'action' => 'projects'
@@ -28,6 +23,11 @@ return [
     'projects/{page:\d+}' => [
         'controller' => 'main',
         'action' => 'projects'
+    ],
+
+    'project/{project:\d+}' => [
+        'controller' => 'main',
+        'action' => 'project'
     ],
 
     'studio' => [

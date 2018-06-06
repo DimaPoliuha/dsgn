@@ -10,6 +10,7 @@ namespace application\controllers;
 
 use application\core\Controller;
 use application\lib\Pagination;
+use application\models\Admin;
 
 class MainController extends Controller {
 
@@ -38,6 +39,22 @@ class MainController extends Controller {
             $this->model->getProjects();
         }
 //        $this->model->getFooter();
+    }
+
+    public function projectAction(){
+        $id = $this->route['project'];
+        $adminModel = new Admin();
+        if(!$adminModel->isProductExists($id)){
+            $this->view->errorCode(404);
+        }
+//        debug($this->model->productData($id));
+//        debug($id);
+        $vars = [
+            'data' => $this->model->productData($id)[0],
+        ];
+        $this->view->render('Project', $vars);
+        $this->model->getProject();
+        $this->model->getFooter();
     }
 
     public function studioAction(){

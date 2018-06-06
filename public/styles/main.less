@@ -84,6 +84,10 @@ a{
 	font-weight: 700;
 }
 
+.basket{
+	cursor: pointer;
+}
+
 *{
 	box-sizing: border-box;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -450,6 +454,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 		position: relative;
 		z-index: 2;
 		left: 10px;
+		top: 30px;
+	}
+
+	a{
+		position: relative;
+		z-index: 2;
+		left: 10px;
 		top: 40px;
 		&:hover{
 			color: #6E6E6E;
@@ -468,12 +479,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 		background-size: 35px 35px;
 	}
 
-	.product-img{
+	img{
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
+		object-fit: cover;
 		height: 100%;
+		width: 100%;
 		z-index: 1;
 	}
 }
@@ -485,7 +497,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 	flex: 0 0 33.333333%;
 	max-width: 33.333333%;
 
-	padding: 2% 0 0 2%;
+	padding: 1% 0 0 2%;
 	background: @white;
 	position: relative;
 	height: 220px;
@@ -505,7 +517,14 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 		position: relative;
 		z-index: 2;
 		left: 10px;
-		top: 10px;
+		top: 0px;
+	}
+
+	a{
+		position: relative;
+		z-index: 2;
+		left: 10px;
+		top: -5px;
 		&:hover{
 			color: #6E6E6E;
 			transition: .3s;
@@ -518,17 +537,18 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 		width: 35px;
 		height: 35px;
 		left: 30px;
-		top: 20px;
+		top: 0px;
 		background: url(../images/basket.png) no-repeat 0px 0px;
 		background-size: 35px 35px;
 	}
 
-	.product-img{
+	img{
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
+		object-fit: cover;
 		height: 100%;
+		width: 100%;
 		z-index: 1;
 	}
 }
@@ -545,18 +565,29 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 	position: relative;
 	height: 440px;
 	h2{
+		color: @white;
 		position: relative;
 		margin-bottom: 15px;
 		z-index: 2;
 	}
 
 	h4{
+		color: @white;
 		position: relative;
 		line-height: 1.3em;
 		z-index: 2;
 	}
 
 	h3{
+		color: @white;
+		position: relative;
+		z-index: 2;
+		left: 10px;
+		top: 10px;
+	}
+
+	a{
+		color: @white;
 		position: relative;
 		z-index: 2;
 		left: 10px;
@@ -578,12 +609,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 		background-size: 35px 35px;
 	}
 
-	.product-img{
+	img{
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
+		object-fit: cover;
 		height: 100%;
+		width: 100%;
 		z-index: 1;
 	}
 }
@@ -595,7 +627,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 	flex: 0 0 41.666667%;
 	max-width: 41.666667%;
 
-	padding: 4% 0 0 16%;
+	padding: 4% 0 0 14%;
 	background: @white;
 	position: relative;
 	height: 440px;
@@ -616,6 +648,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 		z-index: 2;
 		right: 50px;
 		top: 50px;
+	}
+
+	a{
+		position: absolute;
+		z-index: 2;
+		right: 50px;
+		top: 75px;
 		&:hover{
 			color: #6E6E6E;
 			transition: .3s;
@@ -633,12 +672,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 		background-size: 35px 35px;
 	}
 
-	.product-img{
+	img{
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
+		object-fit: cover;
 		height: 100%;
+		width: 100%;
 		z-index: 1;
 	}
 }
@@ -670,7 +710,14 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 		position: absolute;
 		z-index: 2;
 		right: 115px;
-		bottom: 90px;
+		bottom: 85px;
+	}
+
+	a{
+		position: absolute;
+		z-index: 2;
+		right: 115px;
+		bottom: 65px;
 		&:hover{
 			color: #6E6E6E;
 			transition: .3s;
@@ -683,17 +730,18 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 		width: 35px;
 		height: 35px;
 		right: 140px;
-		bottom: 50px;
+		bottom: 20px;
 		background: url(../images/basket.png) no-repeat 0px 0px;
 		background-size: 35px 35px;
 	}
 
-	.product-img{
+	img{
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
+		object-fit: cover;
 		height: 100%;
+		width: 100%;
 		z-index: 1;
 	}
 }
@@ -705,7 +753,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 	flex: 0 0 25%;
 	max-width: 25%;
 
-	padding: 5% 0 0 12%;
+	padding: 3% 0 0 12%;
 	background: @white;
 	position: relative;
 	height: 300px;
@@ -726,6 +774,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 		z-index: 2;
 		left: 10px;
 		top: 20px;
+	}
+
+	a{
+		position: relative;
+		z-index: 2;
+		left: 10px;
+		top: 35px;
 		&:hover{
 			color: #6E6E6E;
 			transition: .3s;
@@ -743,12 +798,74 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
 		background-size: 35px 35px;
 	}
 
-	.product-img{
+	img{
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
+		object-fit: cover;
 		height: 100%;
+		width: 100%;
+		z-index: 1;
+	}
+}
+
+.product-view{
+	width: 100%;
+	background-size: cover;
+	padding: 12% 0 0 12%;
+	background: @white;
+	position: relative;
+	height: 800px;
+	h2{
+		position: relative;
+		margin-bottom: 20px;
+		z-index: 2;
+	}
+
+	h4{
+		position: relative;
+		line-height: 1.3em;
+		z-index: 2;
+		max-width: 200px;
+	}
+
+	h3{
+		position: relative;
+		z-index: 2;
+		//left: 10px;
+		font-size: 17px;
+		top: 50px;
+	}
+
+	a{
+		position: relative;
+		z-index: 2;
+		font-size: 17px;
+		top: 65px;
+		&:hover{
+			color: #6E6E6E;
+			transition: .3s;
+		}
+	}
+
+	.basket{
+		position: relative;
+		z-index: 2;
+		width: 35px;
+		height: 35px;
+		left: 30px;
+		top: 80px;
+		background: url(../images/basket.png) no-repeat 0px 0px;
+		background-size: 35px 35px;
+	}
+
+	img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
 		z-index: 1;
 	}
 }

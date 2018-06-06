@@ -41,7 +41,8 @@
                     <br>
                     <b>Year</b>: <?php echo $item['year']; ?>
                 </h4>
-                <a class="view-project" href="">View project</a>
+                <h3>Price: <?php echo $item['price']; ?>$</h3>
+                <a href="/<?php echo \application\core\ROOT_URL?>project/<?php echo $item['id']?>">View project</a>
                 <div class="basket"></div>
                 <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/<?php echo $item['id']; ?>.png"/>
             </div>
