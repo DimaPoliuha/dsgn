@@ -35,6 +35,11 @@ return [
         'action' => 'project'
     ],
 
+    'basket' => [
+        'controller' => 'main',
+        'action' => 'basket'
+    ],
+
     'studio' => [
         'controller' => 'main',
         'action' => 'studio'
@@ -107,6 +112,11 @@ return [
     'admin/products' => [
         'controller' => 'admin',
         'action' => 'products'
+    ],
+
+    'admin/orders' => [
+        'controller' => 'admin',
+        'action' => 'orders'
     ],
 
     'admin/edit/{id:\d+}' => [

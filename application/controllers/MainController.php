@@ -92,4 +92,8 @@ class MainController extends Controller {
         $this->model->getFooter();
     }
 
+    public function basket(){
+        $this->view->render('Contact us');
+    }
+
 }

@@ -106,4 +106,14 @@ class AdminController extends Controller {
         $this->model->deleteProduct($id);
         $this->view->redirect('/' . ROOT_URL . 'admin/products');
     }
+
+    public function ordersAction(){
+        $productsOnPage = 100;
+        $pagination = new Pagination($this->route, $this->model->ordersCount(), $productsOnPage);
+        $vars = [
+            'pagination' => $pagination->get(),
+            'list' => $this->model->ordersList($this->route, $productsOnPage),
+        ];
+        $this->view->render('Orders', $vars);
+    }
 }

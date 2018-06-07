@@ -19,6 +19,7 @@ return [
         'project',
         'filter',
         'confirm',
+        'basket',
         'reset'
     ],
     'authorize' => [
@@ -30,6 +31,7 @@ return [
         'logout',
         'profile',
         'project',
+        'basket',
         'filter',
     ],
     'admin' => [
@@ -46,6 +48,7 @@ return [
         'project',
         'filter',
         'confirm',
+        'basket',
         'reset'
     ],
 ];

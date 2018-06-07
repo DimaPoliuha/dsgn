@@ -43,6 +43,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/<?php echo \application\core\ROOT_URL?>admin/orders">
+                        <i class="fa fa-fw fa-list"></i>
+                        <span class="nav-link-text">Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/<?php echo \application\core\ROOT_URL?>admin/logout">
                         <i class="fa fa-fw fa-sign-out"></i>
                         <span class="nav-link-text">Exit</span>

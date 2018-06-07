@@ -16,6 +16,7 @@ return [
     'admin' => [
         'logout',
         'products',
+        'orders',
         'add',
         'edit',
         'delete',

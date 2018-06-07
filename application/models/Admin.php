@@ -182,4 +182,27 @@ class Admin extends Model {
             ->from('style')
             ->execute();
     }
+
+    public function ordersCount(){
+        $this->db = new Db();
+        return count($this->db
+            ->select()
+            ->from('projects')
+            ->execute());
+    }
+
+    public function ordersList($route, $max){
+        $start = (($route['page'] ?? 1) - 1) * $max;
+        $this->db = new Db();
+        return $this->db
+            ->select('orders.id', 'accounts.login', 'accounts.email', 'projects.title', 'projects.price', 'orders.count')
+            ->from('orders')
+            ->innerJoin('accounts')
+            ->on("orders.account_id", "=", "accounts.id")
+            ->innerJoin('projects')
+            ->on("orders.project_id", "=", "projects.id")
+            ->limit($start)
+            ->limit($max)
+            ->execute();
+    }
 }
