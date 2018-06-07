@@ -19,7 +19,6 @@ return [
         'project',
         'filter',
         'confirm',
-        'basket',
         'reset'
     ],
     'authorize' => [
