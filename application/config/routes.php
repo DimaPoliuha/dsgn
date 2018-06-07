@@ -62,12 +62,27 @@ return [
         'action' => 'register'
     ],
 
+    'account/recovery' => [
+        'controller' => 'account',
+        'action' => 'recovery'
+    ],
+
+    'account/reset/{token:\w+}' => [
+        'controller' => 'account',
+        'action' => 'reset'
+    ],
+
+    'account/confirm/{token:\w+}' => [
+        'controller' => 'account',
+        'action' => 'confirm'
+    ],
+
     'account/logout' => [
         'controller' => 'account',
         'action' => 'logout'
     ],
 
-    'profile' => [
+    'account/profile' => [
         'controller' => 'account',
         'action' => 'profile'
     ],

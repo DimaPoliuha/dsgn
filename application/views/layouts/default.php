@@ -28,8 +28,13 @@
 <script type="text/javascript" src="/<?php echo \application\core\ROOT_URL?>public/scripts/form.js" async></script>
 
 <nav id="menu-mob">
-    <a class="text-menu color-white" href="/<?php echo \application\core\ROOT_URL?>login">Log in</a>
-    <a class="text-menu color-white" href=/<?php echo \application\core\ROOT_URL?>register">Register</a>
+    <?php if(isset($_SESSION['account']['id'])): ?>
+        <a class="text-menu color-white" href="/<?php echo \application\core\ROOT_URL?>account/profile">Profile</a>
+        <a class="text-menu color-white" href=/<?php echo \application\core\ROOT_URL?>account/logout">Logout</a>
+    <?php else: ?>
+        <a class="text-menu color-white" href="/<?php echo \application\core\ROOT_URL?>login">Log in</a>
+        <a class="text-menu color-white" href=/<?php echo \application\core\ROOT_URL?>register">Register</a>
+    <?php endif; ?>
     <hr class="line-menu"/>
     <a class="text-menu color-white" href="/<?php echo \application\core\ROOT_URL?>">Home</a>
     <a class="text-menu color-white" href="/<?php echo \application\core\ROOT_URL?>projects">Projects</a>
@@ -68,8 +73,13 @@
                             <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>studio";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>studio">Studio</a></li>
                             <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>projects";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>projects">Projects</a></li>
                             <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>">Home</a></li>
-                            <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>login";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>login">Log in</a></li>
-                            <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>register";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>register">Register</a></li>
+                            <?php if(isset($_SESSION['account']['id'])): ?>
+                                <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>account/profile";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>account/profile">Profile</a></li>
+                                <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>account/logout";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>account/logout">Logout</a></li>
+                            <?php else: ?>
+                                <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>login";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>login">Log in</a></li>
+                                <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>register";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>register">Register</a></li>
+                            <?php endif; ?>
                         </ul>
                     </li>
                 </ul>

@@ -88,6 +88,9 @@ h4 {
 a {
   font-size: 14px;
 }
+input {
+  text-transform: none;
+}
 .light-font {
   font-weight: 300;
 }

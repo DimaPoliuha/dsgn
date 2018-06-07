@@ -13,37 +13,88 @@ use const application\core\ROOT_URL;
 
 class AccountController extends Controller {
 
-//    public function before(){
-//        $this->view->layout = 'custom';
-//    }
-
     public function loginAction(){
-//        $this->view->redirect('/' . ROOT_URL);
         if(!empty($_POST)){
-//            $this->view->message('some status', 'some text');
-            $this->view->location('/' . ROOT_URL);
+            if(!$this->model->validate(['login', 'password'])){
+                $this->view->message('error', $this->model->error);
+            }
+            elseif (!$this->model->checkAccountData()){
+                $this->view->message('error', $this->model->error);
+            }
+            elseif (!$this->model->checkStatus('login', $_POST['login'])){
+                $this->view->message('error', $this->model->error);
+            }
+            $this->model->login();
+            $this->view->location('/'.ROOT_URL.'account/profile');
         }
         $this->view->render('Log in');
     }
 
     public function registerAction(){
-        //$this->view->layout = 'custom';
+        if(!empty($_POST)){
+            if(!$this->model->validate(['login', 'email', 'password'])){
+                $this->view->message('error', $this->model->error);
+            }
+            elseif (!$this->model->checkEmailExists()){
+                $this->view->message('error', $this->model->error);
+            }
+            elseif (!$this->model->checkLoginExists()){
+                $this->view->message('error', $this->model->error);
+            }
+            $this->model->register();
+            $this->view->message('success', 'Register success, confirm email.');
+        }
         $this->view->render('Register');
-        //$this->view->path = 'test/test';
-        //var_dump($this->route);
+    }
+
+    public function confirmAction(){
+        if(!$this->model->checkTokenExists($this->route['token'])){
+            $this->view->redirect('/' . ROOT_URL . 'login');
+        }
+        $this->model->activate($this->route['token']);
+        $this->view->redirect('/' . ROOT_URL . 'login');
+        $this->view->message('success', 'Register finished!');
     }
 
     public function logoutAction(){
-        //$this->view->layout = 'custom';
-        $this->view->render('Logout');
-        //$this->view->path = 'test/test';
-        //var_dump($this->route);
+        unset($_SESSION['account']);
+        $this->view->redirect('/' . ROOT_URL . 'login');
+    }
+
+    public function recoveryAction(){
+        if(!empty($_POST)){
+            if(!$this->model->validate(['email'])){
+                $this->view->message('error', $this->model->error);
+            }
+            elseif ($this->model->checkEmailExists()){
+                $this->view->message('error', 'There are no such email');
+            }
+            elseif (!$this->model->checkStatus('email', $_POST['email'])){
+                $this->view->message('error', $this->model->error);
+            }
+            $this->model->recovery();
+            $this->view->message('success', 'Link was sent to your email.');
+        }
+        $this->view->render('Recover password');
+    }
+
+    public function resetAction(){
+        if(!$this->model->checkTokenExists($this->route['token'])){
+            $this->view->redirect('/' . ROOT_URL . 'account/recovery');
+        }
+        $this->model->reset($this->route['token']);
+
+        $this->view->redirect('/' . ROOT_URL . 'login');
     }
 
     public function profileAction(){
-        //$this->view->layout = 'custom';
+        if(!empty($_POST)) {
+            if (!$this->model->validate(['email'])) {
+                $this->view->message('error', $this->model->error);
+            }
+            $id = $this->model->checkEmailExists();
+
+        }
         $this->view->render('Profile');
-        //$this->view->path = 'test/test';
-        //var_dump($this->route);
     }
 }

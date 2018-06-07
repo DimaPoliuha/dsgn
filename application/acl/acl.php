@@ -15,10 +15,11 @@ return [
         'contact',
         'login',
         'register',
-        'logout',
-        'profile',
+        'recovery',
         'project',
-        'filter'
+        'filter',
+        'confirm',
+        'reset'
     ],
     'authorize' => [
         'index',
@@ -26,12 +27,10 @@ return [
         'studio',
         'news',
         'contact',
-        'login',
-        'register',
         'logout',
         'profile',
         'project',
-        'filter'
+        'filter',
     ],
     'admin' => [
         'index',
@@ -42,8 +41,11 @@ return [
         'login',
         'register',
         'logout',
+        'recovery',
         'profile',
         'project',
-        'filter'
+        'filter',
+        'confirm',
+        'reset'
     ],
 ];
