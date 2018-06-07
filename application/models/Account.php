@@ -93,15 +93,11 @@ class Account extends Model {
             'email' => $_POST['email'],
         ];
         $this->db = new Db();
-        if($this->db
+        return $this->db
             ->select('id')
             ->from('accounts')
             ->where('email', '=', ":email")
-            ->execute($params)){
-            $this->error = 'This email has already taken';
-            return false;
-        }
-        return true;
+            ->execute($params);
     }
 
     public function checkLoginExists(){
@@ -222,6 +218,34 @@ class Account extends Model {
             ->where("token", "=", ':token')
             ->execute($params);
         mail($mail[0]['email'], 'New password', 'Password: '.$newPass);
+    }
+
+    public function save(){
+        $params = [
+            'id' => $_SESSION['account']['id'],
+            'email' => $_POST['email'],
+        ];
+        $this->db = new Db();
+        if(!empty($_POST['password'])){
+            $params['password'] = password_hash($_POST['password'], PASSWORD_BCRYPT);
+
+            $this->db
+                ->update("accounts")
+                ->set("email", ":email")
+                ->set('password', ':password')
+                ->where("id", "=", ':id')
+                ->execute($params);
+        }
+        else{
+            $this->db
+                ->update("accounts")
+                ->set("email", ":email")
+                ->where("id", "=", ':id')
+                ->execute($params);
+        }
+        foreach ($params as $key => $val) {
+            $_SESSION['account'][$key] = $val;
+        }
     }
 
 }

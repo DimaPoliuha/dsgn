@@ -35,8 +35,8 @@ class AccountController extends Controller {
             if(!$this->model->validate(['login', 'email', 'password'])){
                 $this->view->message('error', $this->model->error);
             }
-            elseif (!$this->model->checkEmailExists()){
-                $this->view->message('error', $this->model->error);
+            elseif ($this->model->checkEmailExists()){
+                $this->view->message('error', "This email has already taken");
             }
             elseif (!$this->model->checkLoginExists()){
                 $this->view->message('error', $this->model->error);
@@ -66,7 +66,7 @@ class AccountController extends Controller {
             if(!$this->model->validate(['email'])){
                 $this->view->message('error', $this->model->error);
             }
-            elseif ($this->model->checkEmailExists()){
+            elseif (!$this->model->checkEmailExists()){
                 $this->view->message('error', 'There are no such email');
             }
             elseif (!$this->model->checkStatus('email', $_POST['email'])){
@@ -93,6 +93,18 @@ class AccountController extends Controller {
                 $this->view->message('error', $this->model->error);
             }
             $id = $this->model->checkEmailExists();
+            if (isset($id) and $id != null) {
+                if ($id[0]['id'] != $_SESSION['account']['id']) {
+                    $this->view->message('error', "This email has already taken");
+                }
+            }
+            if(!empty($_POST['password'])){
+                if(!$this->model->validate(['password'])){
+                    $this->view->message('error', $this->model->error);
+                }
+            }
+            $this->model->save();
+            $this->view->message('success', "Saved");
 
         }
         $this->view->render('Profile');
