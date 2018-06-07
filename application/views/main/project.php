@@ -35,7 +35,7 @@
             </h4>
             <h3>Price: <?php echo $data['price']; ?>$</h3>
             <a href="/<?php echo \application\core\ROOT_URL?>project/<?php echo $data['id']?>">View project</a>
-            <div class="basket"></div>
+<!--            <a href="/--><?php //echo \application\core\ROOT_URL?><!--basket"><div class="basket"></div></a>-->
             <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/<?php echo $data['id']; ?>.png"/>
         </div>
     <?php endif;?>

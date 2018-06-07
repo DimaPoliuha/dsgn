@@ -92,8 +92,15 @@ class MainController extends Controller {
         $this->model->getFooter();
     }
 
-    public function basket(){
-        $this->view->render('Contact us');
+    public function basketAction(){
+        if(!empty($_POST)){
+            $id = $this->model->orderAdd();
+            $this->view->message('Success', 'Order added, id: ' . $id);
+        }
+        $vars = [
+            'project_name' => $this->model->projectName(),
+        ];
+        $this->view->render('Basket', $vars);
     }
 
 }

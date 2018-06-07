@@ -74,6 +74,7 @@
                             <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>projects";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>projects">Projects</a></li>
                             <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>">Home</a></li>
                             <?php if(isset($_SESSION['account']['id'])): ?>
+                                <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>basket";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>basket">Buy product</a></li>
                                 <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>account/profile";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>account/profile">Profile</a></li>
                                 <li onclick='location.href="/<?php echo \application\core\ROOT_URL?>account/logout";'><a class="color-white" href="/<?php echo \application\core\ROOT_URL?>account/logout">Logout</a></li>
                             <?php else: ?>

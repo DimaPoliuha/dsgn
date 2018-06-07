@@ -350,6 +350,15 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
+li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
+  top: -372px;
+  left: 98px;
+  animation-name: menu2;
+  animation-duration: 200ms;
+  animation-delay: 0ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
 @keyframes menu2 {
   0% {
     opacity: 0;
