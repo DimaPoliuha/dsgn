@@ -168,28 +168,4 @@ class Main extends Model {
             ->execute();
     }
 
-    public function orderAdd(){
-
-        $params = [
-            'account_id' => $_SESSION['account']['id'],
-            'project_id' => $_POST['product_id'],
-            'count' => $_POST['count'],
-        ];
-        $this->db = new Db();
-        $this->db
-            ->insert("account_id", "project_id", "count")
-            ->into("orders")
-            ->values(":account_id", ":project_id", ":count")
-            ->execute($params);
-        return $this->db->lastInsertId();
-    }
-
-    public function projectName(){
-        $this->db = new Db();
-        return $this->db
-            ->select('id', 'title')
-            ->from('projects')
-            ->execute();
-    }
-
 }

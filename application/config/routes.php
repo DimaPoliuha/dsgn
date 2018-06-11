@@ -35,11 +35,6 @@ return [
         'action' => 'project'
     ],
 
-    'basket' => [
-        'controller' => 'main',
-        'action' => 'basket'
-    ],
-
     'studio' => [
         'controller' => 'main',
         'action' => 'studio'
@@ -53,6 +48,18 @@ return [
     'contact' => [
         'controller' => 'main',
         'action' => 'contact'
+    ],
+
+//    BasketController
+
+    'basket/orders' => [
+        'controller' => 'basket',
+        'action' => 'orders'
+    ],
+
+    'basket/buy/{id:\d+}' => [
+        'controller' => 'basket',
+        'action' => 'buy'
     ],
 
 //    AccountController

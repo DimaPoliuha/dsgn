@@ -16,7 +16,6 @@ abstract class Controller{
 
     public function __construct($route){
         $this->route = $route;
-//        $_SESSION['authorize']['id'] = 1;
         if(!$this->checkAcl()){
             View::errorCode(403);
         }

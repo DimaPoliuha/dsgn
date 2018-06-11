@@ -15,7 +15,6 @@ class Router{
     protected $routes = [];
     protected $params = [];
 
-
     function __construct(){
         $path = 'application/config/routes.php';
         if (file_exists($path)){
@@ -24,8 +23,6 @@ class Router{
                 $this->add($key, $val);
             }
         }
-        //debug($arr);
-        //debug($this->routes);
     }
 
     public function add($route, $params) {
@@ -36,7 +33,6 @@ class Router{
 
     public function match(){
         $url = trim(substr($_SERVER['REQUEST_URI'], strlen(ROOT_URL)), '/');
-        //debug($url);
         foreach ($this->routes as $route => $params) {
             if (preg_match($route, $url, $matches)) {
                 foreach ($matches as $key => $match) {
@@ -64,17 +60,12 @@ class Router{
                     $controller->$action();
                 } else{
                     View::errorCode(404);
-//                    echo 'action not found';
                 }
             } else{
                 View::errorCode(404);
-//                echo 'not found controller: ' . $path;
             }
-            //echo '<p>controller: <b>' . $this->params['controller'] . '</b></p>';
-            //echo '<p>action: <b>' . $this->params['action'] . '</b></p>';
         } else{
             View::errorCode(404);
-//            echo 'route not found';
         }
     }
 }

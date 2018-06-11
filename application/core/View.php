@@ -16,8 +16,6 @@ class View{
     public function __construct($route){
         $this->route = $route;
         $this->path = $route['controller'] . '/' . $route['action'];
-        //debug($this->route);
-        //debug($this->path);
     }
 
     public function render($title, $vars = []){
@@ -32,9 +30,6 @@ class View{
                 require_once $layoutPath;
             }
         }
-//          else{
-//            echo 'view not found: ' . $this->path;
-//        }
     }
 
     public function redirect($url){
@@ -57,5 +52,4 @@ class View{
         }
         exit;
     }
-
 }

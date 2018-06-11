@@ -34,8 +34,10 @@
                 <b>Description</b>: <?php echo $data['description']; ?>
             </h4>
             <h3>Price: <?php echo $data['price']; ?>$</h3>
-            <a href="/<?php echo \application\core\ROOT_URL?>project/<?php echo $data['id']?>">View project</a>
-<!--            <a href="/--><?php //echo \application\core\ROOT_URL?><!--basket"><div class="basket"></div></a>-->
+<!--            <a href="/--><?php //echo \application\core\ROOT_URL?><!--project/--><?php //echo $data['id']?><!--">View project</a>-->
+            <?php if(isset($_SESSION['account']['id'])): ?>
+                <a href="/<?php echo \application\core\ROOT_URL?>basket/buy/<?php echo $data['id'];?>"><div class="basket"></div></a>
+            <?php endif;?>
             <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/<?php echo $data['id']; ?>.png"/>
         </div>
     <?php endif;?>

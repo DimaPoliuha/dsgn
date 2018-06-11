@@ -31,6 +31,8 @@ return [
         'profile',
         'project',
         'basket',
+        'orders',
+        'buy',
         'filter',
     ],
     'admin' => [
@@ -48,6 +50,8 @@ return [
         'filter',
         'confirm',
         'basket',
+        'orders',
+        'buy',
         'reset'
     ],
 ];

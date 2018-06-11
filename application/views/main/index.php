@@ -29,7 +29,7 @@
             <h2>There are no projects</h2>
         </div>
     <?php else: ?>
-        <?php foreach ($list as $item): ?>
+        <?php foreach ($list as $key => $item): ?>
             <div class="grid-item <?php echo $item['style']; ?> col-sm-6 offset shadow">
                 <h2><?php echo $item['title']; ?></h2>
                 <h4>
@@ -42,8 +42,10 @@
                     <b>Year</b>: <?php echo $item['year']; ?>
                 </h4>
                 <h3>Price: <?php echo $item['price']; ?>$</h3>
-                <a href="/<?php echo \application\core\ROOT_URL?>project/<?php echo $item['id']?>">View project</a>
-<!--                <a href="/--><?php //echo \application\core\ROOT_URL?><!--basket"><div class="basket"></div></a>-->
+                <a class="view-btn" href="/<?php echo \application\core\ROOT_URL?>project/<?php echo $item['id']?>">View project</a>
+                <?php if(isset($_SESSION['account']['id'])): ?>
+                    <a href="/<?php echo \application\core\ROOT_URL?>basket/buy/<?php echo $key;?>"><div class="basket"></div></a>
+                <?php endif;?>
                 <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/<?php echo $item['id']; ?>.png"/>
             </div>
         <?php endforeach;?>

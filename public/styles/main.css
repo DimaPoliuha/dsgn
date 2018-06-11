@@ -448,13 +448,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
   left: 10px;
   top: 30px;
 }
-.w-4-h-3 a {
+.w-4-h-3 .view-btn {
   position: relative;
   z-index: 2;
   left: 10px;
   top: 40px;
 }
-.w-4-h-3 a:hover {
+.w-4-h-3 .view-btn:hover {
   color: #6E6E6E;
   transition: .3s;
 }
@@ -507,13 +507,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
   left: 10px;
   top: 0px;
 }
-.w-4-h-1 a {
+.w-4-h-1 .view-btn {
   position: relative;
   z-index: 2;
   left: 10px;
   top: -5px;
 }
-.w-4-h-1 a:hover {
+.w-4-h-1 .view-btn:hover {
   color: #6E6E6E;
   transition: .3s;
 }
@@ -569,14 +569,14 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
   left: 10px;
   top: 10px;
 }
-.w-3-h-3 a {
+.w-3-h-3 .view-btn {
   color: #efeff4;
   position: relative;
   z-index: 2;
   left: 10px;
   top: 20px;
 }
-.w-3-h-3 a:hover {
+.w-3-h-3 .view-btn:hover {
   color: #6E6E6E;
   transition: .3s;
 }
@@ -629,13 +629,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
   right: 50px;
   top: 50px;
 }
-.w-5-h-3 a {
+.w-5-h-3 .view-btn {
   position: absolute;
   z-index: 2;
   right: 50px;
   top: 75px;
 }
-.w-5-h-3 a:hover {
+.w-5-h-3 .view-btn:hover {
   color: #6E6E6E;
   transition: .3s;
 }
@@ -688,13 +688,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
   right: 115px;
   bottom: 85px;
 }
-.w-5-h-2 a {
+.w-5-h-2 .view-btn {
   position: absolute;
   z-index: 2;
   right: 115px;
   bottom: 65px;
 }
-.w-5-h-2 a:hover {
+.w-5-h-2 .view-btn:hover {
   color: #6E6E6E;
   transition: .3s;
 }
@@ -747,13 +747,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
   left: 10px;
   top: 20px;
 }
-.w-3-h-2 a {
+.w-3-h-2 .view-btn {
   position: relative;
   z-index: 2;
   left: 10px;
   top: 35px;
 }
-.w-3-h-2 a:hover {
+.w-3-h-2 .view-btn:hover {
   color: #6E6E6E;
   transition: .3s;
 }
@@ -801,13 +801,13 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
   font-size: 17px;
   top: 50px;
 }
-.product-view a {
+.product-view .view-btn {
   position: relative;
   z-index: 2;
   font-size: 17px;
   top: 65px;
 }
-.product-view a:hover {
+.product-view .view-btn:hover {
   color: #6E6E6E;
   transition: .3s;
 }
@@ -1014,7 +1014,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
   .w-4-h-3 h3 {
     left: 0px;
   }
-  .w-4-h-3 a {
+  .w-4-h-3 .view-btn {
     left: 0px;
   }
   .w-4-h-3 .basket {
@@ -1027,7 +1027,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
     left: 0px;
     top: -5px;
   }
-  .w-4-h-1 a {
+  .w-4-h-1 .view-btn {
     left: 0px;
     top: -10px;
   }
@@ -1041,7 +1041,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
   .w-3-h-3 h3 {
     left: 0px;
   }
-  .w-3-h-3 a {
+  .w-3-h-3 .view-btn {
     left: 0px;
     top: 10px;
   }
@@ -1063,7 +1063,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
   .w-5-h-2 h3 {
     right: 75px;
   }
-  .w-5-h-2 a {
+  .w-5-h-2 .view-btn {
     right: 75px;
   }
   .w-5-h-2 .basket {
@@ -1077,7 +1077,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
     left: 0px;
     top: 10px;
   }
-  .w-3-h-2 a {
+  .w-3-h-2 .view-btn {
     left: 0px;
     top: 10px;
   }
@@ -1219,7 +1219,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
   .w-4-h-3 h3 {
     left: 0px;
   }
-  .w-4-h-3 a {
+  .w-4-h-3 .view-btn {
     left: 0px;
   }
   .w-4-h-3 .basket {
@@ -1247,7 +1247,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
     max-width: 50%;
     padding: 4% 0 0 10%;
   }
-  .w-5-h-3 a {
+  .w-5-h-3 .view-btn {
     right: auto;
     top: auto;
   }
@@ -1270,7 +1270,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
     top: 190px;
     right: 50px;
   }
-  .w-5-h-2 a {
+  .w-5-h-2 .view-btn {
     right: 50px;
     bottom: 90px;
   }
@@ -1484,7 +1484,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
     max-width: 50%;
     padding: 4% 0 0 6%;
   }
-  .w-5-h-3 a {
+  .w-5-h-3 .view-btn {
     right: auto;
     top: auto;
   }
@@ -1512,7 +1512,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
     top: 190px;
     right: 30px;
   }
-  .w-5-h-2 a {
+  .w-5-h-2 .view-btn {
     right: 30px;
     bottom: 70px;
   }
@@ -1532,7 +1532,7 @@ li:hover > ul.drop-menu.menu-2 li:nth-child(8) {
     top: 0;
     left: 0;
   }
-  .w-3-h-2 a {
+  .w-3-h-2 .view-btn {
     top: 0;
     left: 0;
   }

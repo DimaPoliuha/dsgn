@@ -17,13 +17,12 @@ class MainController extends Controller {
     public function indexAction(){
 
         $vars = [
-            'list' => $this->model->productsList(0, 8),
+            'list' => $this->model->productsList(0, 9),
         ];
 
         $this->view->render('Home', $vars);
         $this->model->getIndex();
         $this->model->getStudio();
-//        $this->model->getNews();
         $this->model->getFooter();
     }
 
@@ -35,10 +34,9 @@ class MainController extends Controller {
             'list' => $this->model->productsList($this->route, $productsOnPage),
         ];
         $this->view->render('Projects', $vars);
-        if(!$this->model->getProjects()){
-            $this->model->getProjects();
-        }
-//        $this->model->getFooter();
+//        if(!$this->model->getProjects()){
+//            $this->model->getProjects();
+//        }
     }
 
     public function filterAction(){
@@ -57,25 +55,23 @@ class MainController extends Controller {
         if(!$adminModel->isProductExists($id)){
             $this->view->errorCode(404);
         }
-//        debug($this->model->productData($id));
-//        debug($id);
         $vars = [
             'data' => $this->model->productData($id)[0],
         ];
         $this->view->render('Project', $vars);
-        $this->model->getProject();
+//        $this->model->getProject();
         $this->model->getFooter();
     }
 
     public function studioAction(){
         $this->view->render('Studio');
-        $this->model->getStudio();
+//        $this->model->getStudio();
         $this->model->getFooter();
     }
 
     public function newsAction(){
         $this->view->render('News');
-        $this->model->getNews();
+//        $this->model->getNews();
         $this->model->getFooter();
     }
 
@@ -88,19 +84,8 @@ class MainController extends Controller {
             $this->view->message('Success!', 'Thanks, we will contact you in 7 days.');
         }
         $this->view->render('Contact us');
-        $this->model->getContact();
+//        $this->model->getContact();
         $this->model->getFooter();
-    }
-
-    public function basketAction(){
-        if(!empty($_POST)){
-            $id = $this->model->orderAdd();
-            $this->view->message('Success', 'Order added, id: ' . $id);
-        }
-        $vars = [
-            'project_name' => $this->model->projectName(),
-        ];
-        $this->view->render('Basket', $vars);
     }
 
 }
