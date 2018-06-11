@@ -44,7 +44,7 @@
                 <h3>Price: <?php echo $item['price']; ?>$</h3>
                 <a class="view-btn" href="/<?php echo \application\core\ROOT_URL?>project/<?php echo $item['id']?>">View project</a>
                 <?php if(isset($_SESSION['account']['id'])): ?>
-                    <a href="/<?php echo \application\core\ROOT_URL?>basket/buy/<?php echo $key;?>"><div class="basket"></div></a>
+                    <a href="/<?php echo \application\core\ROOT_URL?>basket/buy/<?php echo $item['id']; ?>"><div class="basket"></div></a>
                 <?php endif;?>
                 <img class="product-img" src="/<?php echo \application\core\ROOT_URL?>public/images/<?php echo $item['id']; ?>.png"/>
             </div>
